@@ -1,0 +1,7 @@
+/node_modules
+/dist
+/.idea
+.DS_Store
+index.html
+oldIndex.html
+oldscript.js
