@@ -17,6 +17,7 @@
     margin-top: 0;
 }
 
+
 .main-block__content {
     width: 42%;
     margin: 0 auto 95px auto;
@@ -522,3 +523,4 @@ text-align: center;
 		transform: rotate(360deg);
 	}
 }
+/*
