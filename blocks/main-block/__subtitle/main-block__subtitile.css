@@ -1,0 +1,10 @@
+.main-block__subtitle {    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    width: 100%;
+    margin: 0 auto 64px auto;
+    color: white;
+}

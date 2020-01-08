@@ -1,0 +1,4 @@
+.main-block__menu-container {
+    display: flex;
+    list-style-type: none;
+}

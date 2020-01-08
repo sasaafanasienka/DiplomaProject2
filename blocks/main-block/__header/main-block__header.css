@@ -1,0 +1,14 @@
+.main-block__header {
+    max-height: 20px;
+    display: flex;
+    padding: 34px 7% 30px 7%;
+    /* border-color: ; */
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 88px 0;
+}
+
+.main-block__header_inverted {
+    border-bottom-color: rgba(0, 0, 0, .3);
+}

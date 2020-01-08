@@ -1,4 +1,4 @@
-/* @import url(./__header/main-block__header.css);
+@import url(./__header/main-block__header.css);
 @import url(./__search-button/main-block__search-button.css);
 @import url(./__search-container/main-block__search-container.css);
 @import url(./__search-input/main-block__search-input.css);
@@ -6,12 +6,12 @@
 @import url(./__title/main-block__title.css);
 @import url(./__logo/main-block___logo.css);
 @import url(./__menu-container/main-block__menu-container.css);
-@import url(./__menu-item/main-block__menu-item.css); */
+@import url(./__menu-item/main-block__menu-item.css);
 
 .main-block {
     width: 100%;
     height: 100%;
-    background-image: url(../images/mainimage.jpg);
+    background-image: url(../../images/mainimage.jpg);
     background-position: center;
     background-size: cover;
     margin-top: 0;
@@ -222,7 +222,7 @@ text-align: center;
     overflow: hidden;
     border-radius: 1000px;
     position: relative;
-    background-image: url('../images/userimage.jpg');
+    background-image: url('../../images/userimage.jpg');
     background-color: blue;
     background-size: cover;
     background-position: center;

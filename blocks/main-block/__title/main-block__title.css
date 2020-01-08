@@ -1,0 +1,10 @@
+.main-block__title {    
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 64px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    color: white;
+}
