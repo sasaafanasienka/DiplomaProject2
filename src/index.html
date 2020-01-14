@@ -2,14 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NewsAnalyzer</title>
-  <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
-  <!-- <link rel="stylesheet" href="./style.css"> -->
-  <!-- <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.style.css%>"> -->
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
-
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
 </head>
   <body>
     <section class="main-block">
@@ -71,11 +66,62 @@
       <button class="text text-center button">Показать еще</button>
     </section>
     <section class="about-author">
+      <!-- <img class="about-author__image" src="../images/userimage.jpg" alt=""> -->
       <div class="about-author__image"></div>
       <div class="about-author__info-container">
         <h3 class="title title_margintop">Александр Афанасенко</h3>
         <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут.</p>
         <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
+      </div>
+    </section>
+    <section class='results slider'>
+      <div class="results__title-container">
+        <h3 class="title">История коммитов из GitHub</h3>
+        <a class="text text-right">Открыть в GitHub &gt;</a>
+      </div>
+      <!-- <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "marginLeft": 7.5%, "marginRight": 7.5%}'> -->
+      <!-- <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": 3, "marginLeft": 7.5%, "marginRight": 7.5%}'> -->
+      <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": 3}'>
+        <div class="carousel-cell">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+        </div>
+        <div class="carousel-cell">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+        </div>
+        <div class="carousel-cell">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+        </div>
+        <div class="carousel-cell">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+        </div>
+        <div class="carousel-cell">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+        </div>
+        <div class="carousel-cell">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+        </div>
+        <div class="carousel-cell">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+        </div>
+        <div class="carousel-cell">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+        </div>
       </div>
     </section>
     <footer class='footer'>
@@ -90,6 +136,7 @@
         <a class='icon-link'href="#"><img src="../images/Facebook_logo.svg" alt="Facebook logo"></a>
       </div>
     </footer>
-    <!-- <script src="./index.js"></script> -->
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> linked JS with slider -->
   </body>
 </html>

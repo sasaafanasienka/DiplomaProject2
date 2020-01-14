@@ -1,14 +1,94 @@
-Html Webpack Plugin:
-<pre>
-  TypeError: Cannot read property 'css' of undefined
-  
-  - index.html:95 
-    D:/Yandex.Praktikum/DiplomaProject2/src/index.html:95:47
-  
-  - index.html:100 module.exports
-    D:/Yandex.Praktikum/DiplomaProject2/src/index.html:100:3
-  
-  - index.js:284 
-    [DiplomaProject2]/[html-webpack-plugin]/index.js:284:18
-  
-</pre>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>NewsAnalyzer</title>
+  <link rel="stylesheet" href="style.ae2926f1b42c920aff13.css">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <!-- <link rel="shortcut icon" href="../images/favicon.png" type="image/png"> -->
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+  <body>
+    <section class="main-block">
+      <header class="main-block__header">
+        <h2 class="main-block__logo">NewsAnalyzer</h2>
+        <ul class="main-block__menu-container">
+          <a class="main-block__menu-item link-text link-text_inverted" href="#">Главная</a>  <!-- неработающая ссылка!!!!!!!!!!!!!!!!! -->
+          <a class="main-block__menu-item link-text link-text_inverted" href="#">О проекте</a> <!-- неработающая ссылка!!!!!!!!!!!!!!!!! -->
+        </ul>
+      </header>
+      <div class="main-block__content">
+        <h1 class="main-block__title">Что в мире творится?</h1>
+        <h3 class="main-block__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h3>
+        <div class="main-block__search-container">
+          <input type="text" value="Введите тему новости" class="main-block__search-input"></input>
+          <button class="main-block__search-button">Искать</button>
+        </div>
+      </div>
+    </section>
+    <sectio class="results preloader">
+        <i class="circle-preloader"></i>
+        <p class="text text-center">Идет поиск новостей...</p>
+    </sectio>
+    <section class="results preloader">
+        <div class="no-result__image">
+          <img src="../images/not-found_v1.svg" alt="Image not found">
+        </div>
+        <h4 class="card-title card-title_center">Ничего не найдено!</h4>
+        <p class="text text-center">К сожалению по вашему запросу ничего не найдено.</p>
+    </section>
+    <section class="results">
+      <div class="results__title-container">
+        <h3 class="title">Результаты поиска</h3>
+        <a class="text text-right">Посмотреть аналитику &gt;</a>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <img class="card-cover" src="../images/image_08.png" alt="">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+          <p class="card-content card-source">Лента.ру</p>
+        </div>
+        <div class="card">
+          <img class="card-cover" src="../images/image_08.png" alt="">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+          <p class="card-content card-source">Лента.ру</p>
+        </div>
+        <div class="card">
+          <img class="card-cover" src="../images/image_08.png" alt="">
+          <p class="card-content card-date">2 августа, 2019</p>
+          <h4 class="card-content card-title">Национальное достояние</h4>
+          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+          <p class="card-content card-source">Лента.ру</p>
+        </div>
+      </div>
+      <button class="text text-center button">Показать еще</button>
+    </section>
+    <section class="about-author">
+      <div class="about-author__image"></div>
+      <div class="about-author__info-container">
+        <h3 class="title title_margintop">Александр Афанасенко</h3>
+        <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут.</p>
+        <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
+      </div>
+    </section>
+    <footer class='footer'>
+      <div class="footer__copyright">&copy;2019 Alaksandr Afanasienka</div>
+      <ul class="footer__links-container">
+        <div class="link-text">Главная</div>
+        <div class="link-text">О проекте</div>
+        <div class="link-text">Яндекс.Практикум</div>
+      </ul>
+      <div class="footer__social-networks">
+        <a class='icon-link' href="#"><img src="../images/Github_logo.svg" alt="Github logo"></a>
+        <a class='icon-link'href="#"><img src="../images/Facebook_logo.svg" alt="Facebook logo"></a>
+      </div>
+    </footer>
+    <script src="main.578115236eb8f13630e7.js"></script>
+    <!-- <script src="./index.js"></script> -->
+  </body>
+</html>
