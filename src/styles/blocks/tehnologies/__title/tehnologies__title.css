@@ -1,0 +1,29 @@
+.tehnologies__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+
+    margin-bottom: 23px;
+    margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+    .tehnologies__title {
+        /* width: 36px; */
+    }
+}
+@media (max-width: 1000px) {
+    .tehnologies__title {
+        margin-top: 25px;
+                /* width: 36px; */
+    }
+}
+@media (max-width: 500px) {
+    .tehnologies__title {
+        margin-top: 17px;
+                /* width: 36px; */
+    }
+}

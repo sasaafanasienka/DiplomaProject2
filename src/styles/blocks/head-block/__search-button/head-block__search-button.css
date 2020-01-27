@@ -1,0 +1,40 @@
+.head-block__search-button {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 1000px;
+    right: 0;
+    top: 0;
+    width: 168px;
+    height: 100%;
+    background: #2F71E5;
+    border: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFF;
+    transition: background-color 0.4s linear 0s;
+}
+
+.head-block__search-button:hover {
+    background-color: #3d80f7;
+}
+
+@media (max-width: 1000px) {
+    .head-block__search-button {
+        width: 155px;
+    }
+}
+@media (max-width: 700px) {
+    .head-block__search-button {
+        width: calc(100% - 240px);
+    }
+}
+@media (max-width: 600px) {
+    .head-block__search-button {
+        width: 100%;
+        position: relative;
+        padding: 17px 24px 17px 24px;
+    }
+}

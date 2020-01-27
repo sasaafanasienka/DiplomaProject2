@@ -1,0 +1,17 @@
+.results__cards-container {
+    width: 100%;
+    margin-bottom: 66px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width:1000px) {
+    .results__cards-container {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:500px) {
+    .results__cards-container {
+        margin-bottom: 15px;
+    }
+}

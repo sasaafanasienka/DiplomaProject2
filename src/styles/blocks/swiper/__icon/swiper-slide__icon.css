@@ -1,0 +1,11 @@
+.swiper-slide__icon {
+    display: flex;
+    min-width: 64px;
+    max-width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: blueviolet;
+    overflow: hidden;
+    margin-right: 16px;
+    /* margin-left: 24px; */
+}

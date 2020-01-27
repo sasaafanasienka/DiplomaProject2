@@ -1,0 +1,27 @@
+/* Сторонние стили */
+@import url(./vendor/normalize.css);
+@import url(./vendor/swiper.css);
+@import url(./vendor/fonts.css);
+/* Стили библиотек */
+@import url(./blocks/general-styles/button.css);
+@import url(./blocks/general-styles/date.css);
+@import url(./blocks/general-styles/link-text.css);
+@import url(./blocks/general-styles/text.css);
+@import url(./blocks/general-styles/title-link-container.css);
+@import url(./blocks/general-styles/title-mini.css);
+@import url(./blocks/general-styles/title.css);
+@import url(./blocks/general-styles/body.css);
+/* Мои стили для разных блоков */
+@import url(./blocks/header/header.css);
+@import url(./blocks/main-block/main-block.css);
+@import url(./blocks/tehnologies/tehnologies.css);
+@import url(./blocks/about-author/about-author.css);
+@import url(./blocks/commits/commits.css);
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/swiper/swiper.css);
+@import url(./blocks/swiper/swiper-slide.css);
+@import url(./blocks/swiper/swiper-container.css);
+@import url(./blocks/swiper/swiper-button.css);
+@import url(./blocks/swiper/swiper-gradient.css);
+@import url(./blocks/swiper/swiper-pagination.css);
+@import url(./blocks/swiper/swiper-wrapper.css);

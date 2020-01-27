@@ -2,141 +2,95 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Cервис для анализа происходящих в мире событий">
+  <meta name="author" content="Alaksandr Afanasienka">
   <title>NewsAnalyzer</title>
+  <link rel="shortcut icon" type="image/png" href="<%=('../images/favicon.png')%>"/>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
-  <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
 </head>
   <body>
-    <section class="main-block">
-      <header class="main-block__header">
-        <h2 class="main-block__logo">NewsAnalyzer</h2>
-        <ul class="main-block__menu-container">
-          <a class="main-block__menu-item link-text link-text_inverted" href="#">Главная</a>  <!-- неработающая ссылка!!!!!!!!!!!!!!!!! -->
-          <a class="main-block__menu-item link-text link-text_inverted" href="#">О проекте</a> <!-- неработающая ссылка!!!!!!!!!!!!!!!!! -->
-        </ul>
+    <section class="head-block">
+      <header class="header">
+        <a class="header__logo" href="./index.html">NewsAnalyzer</a>
+        <div class="header__menu-container">
+          <a class="header__menu-item header__menu-item_active" href="./index.html">Главная</a>
+          <a class="header__menu-item" href="./about.html">О проекте</a>
+        </div>
       </header>
-      <div class="main-block__content">
-        <h1 class="main-block__title">Что в мире творится?</h1>
-        <h3 class="main-block__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h3>
-        <div class="main-block__search-container">
-          <input type="text" value="Введите тему новости" class="main-block__search-input"></input>
-          <button class="main-block__search-button">Искать</button>
+      <div class="head-block__content">
+        <h1 class="head-block__title">Что в мире творится?</h1>
+        <h3 class="head-block__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h3>
+        <div class="head-block__search-container">
+          <input class="head-block__search-input" type="text" placeholder="Введите тему новости" required minlength="2" maxlength="32">
+          <button class="head-block__search-button">Искать</button>
         </div>
       </div>
     </section>
-    <sectio class="results preloader">
-        <i class="circle-preloader"></i>
-        <p class="text text-center">Идет поиск новостей...</p>
-    </sectio>
-    <section class="results preloader">
+    <section class="searching main-block main-block_gray">
+      <i class="circle-preloader"></i>
+      <p class="text text-center">Идет поиск новостей...</p>
+    </section>
+    <section class="main-block main-block_gray no-result">
         <div class="no-result__image">
-          <img src="../images/not-found_v1.svg" alt="Image not found">
+          <img src="<%=('../images/not-found_v1.svg')%>" alt="Image not found">
         </div>
-        <h4 class="card-title card-title_center">Ничего не найдено!</h4>
+        <h4 class="title-mini title-mini_center">Ничего не найдено!</h4>
         <p class="text text-center">К сожалению по вашему запросу ничего не найдено.</p>
     </section>
-    <section class="results">
-      <div class="results__title-container">
+    <section class="results main-block main-block_gray">
+      <div class="title-link-container">
         <h3 class="title">Результаты поиска</h3>
-        <a class="text text-right">Посмотреть аналитику &gt;</a>
+        <a class="link-text text-right" href="./analytics.html">Посмотреть аналитику &gt;</a>
       </div>
-      <div class="cards-container">
-        <div class="card">
-          <img class="card-cover" src="../images/image_08.png" alt="">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          <p class="card-content card-source">Лента.ру</p>
+      <div class="results__cards-container">
+        <div class="results__card">
+          <img class="results__card-cover" src="<%=('../images/image_08.png')%>" alt="">
+          <p class="results__card-content date">2 августа, 2019</p>
+          <h4 class="results__card-content title-mini">Национальное достояние — парки</h4>
+          <p class="results__card-content text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+          <p class="results__card-content source">Лента.ру</p>
         </div>
-        <div class="card">
-          <img class="card-cover" src="../images/image_08.png" alt="">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          <p class="card-content card-source">Лента.ру</p>
+        <div class="results__card">
+          <img class="results__card-cover" src="<%=('../images/image_08.png')%>" alt="">
+          <p class="results__card-content date">2 августа, 2019</p>
+          <h4 class="results__card-content title-mini">Национальное достояние</h4>
+          <p class="results__card-content text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+          <p class="results__card-content source">Лента.ру</p>
         </div>
-        <div class="card">
-          <img class="card-cover" src="../images/image_08.png" alt="">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          <p class="card-content card-source">Лента.ру</p>
+        <div class="results__card">
+          <img class="results__card-cover" src="<%=('../images/image_08.png')%>" alt="">
+          <p class="results__card-content date">2 августа, 2019</p>
+          <h4 class="results__card-content title-mini">Национальное достояние</h4>
+          <p class="results__card-content text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+          <p class="results__card-content source">Лента.ру</p>
         </div>
       </div>
-      <button class="text text-center button">Показать еще</button>
+      <button class="button text text-center">Показать еще</button>
     </section>
-    <section class="about-author">
-      <!-- <img class="about-author__image" src="../images/userimage.jpg" alt=""> -->
-      <div class="about-author__image"></div>
+    <section class="about-author main-block main-block_white">
+      <img class="about-author__img" src="<%=('../images/userimage.jpg')%>" alt="Фото автора">
       <div class="about-author__info-container">
-        <h3 class="title title_margintop">Александр Афанасенко</h3>
+        <h3 class="title">Александр Афанасенко</h3>
         <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут.</p>
         <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
       </div>
     </section>
-    <section class='results slider'>
-      <div class="results__title-container">
-        <h3 class="title">История коммитов из GitHub</h3>
-        <a class="text text-right">Открыть в GitHub &gt;</a>
-      </div>
-      <!-- <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "marginLeft": 7.5%, "marginRight": 7.5%}'> -->
-      <!-- <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": 3, "marginLeft": 7.5%, "marginRight": 7.5%}'> -->
-      <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": 3}'>
-        <div class="carousel-cell">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        </div>
-        <div class="carousel-cell">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        </div>
-        <div class="carousel-cell">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        </div>
-        <div class="carousel-cell">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        </div>
-        <div class="carousel-cell">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        </div>
-        <div class="carousel-cell">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        </div>
-        <div class="carousel-cell">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        </div>
-        <div class="carousel-cell">
-          <p class="card-content card-date">2 августа, 2019</p>
-          <h4 class="card-content card-title">Национальное достояние</h4>
-          <p class="card-content card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        </div>
-      </div>
-    </section>
     <footer class='footer'>
       <div class="footer__copyright">&copy;2019 Alaksandr Afanasienka</div>
-      <ul class="footer__links-container">
-        <div class="link-text">Главная</div>
-        <div class="link-text">О проекте</div>
-        <div class="link-text">Яндекс.Практикум</div>
-      </ul>
+      <div class="footer__links-container">
+        <a class="link-text" href="./index.html">Главная</a>
+        <a class="link-text" href="./about.html">О проекте</a>
+        <a class="link-text" href='https://praktikum.yandex.ru/profile/frontend-developer/'>Яндекс.Практикум</a>
+      </div>
       <div class="footer__social-networks">
-        <a class='icon-link' href="#"><img src="../images/Github_logo.svg" alt="Github logo"></a>
-        <a class='icon-link'href="#"><img src="../images/Facebook_logo.svg" alt="Facebook logo"></a>
+        <a class='footer__icon-link' href="https://github.com/sasaafanasienka/DiplomaProject2"><img src="<%=('../images/Github_logo.svg')%>" alt="Github logo"></a>
+        <a class='footer__icon-link' href="https://www.facebook.com/sasaafanasienka"><img src="<%=('../images/Facebook_logo.svg')%>" alt="Facebook logo"></a>
       </div>
     </footer>
+
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
-    <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> linked JS with slider -->
+
   </body>
 </html>
