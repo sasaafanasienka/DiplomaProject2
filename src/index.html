@@ -11,13 +11,13 @@
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
 </head>
   <body>
-    <section class="head-block">
+    <main class="head-block">
       <header class="header">
         <a class="header__logo" href="./index.html">NewsAnalyzer</a>
-        <div class="header__menu-container">
-          <a class="header__menu-item header__menu-item_active" href="./index.html">Главная</a>
-          <a class="header__menu-item" href="./about.html">О проекте</a>
-        </div>
+        <ul class="header__menu-container">
+          <li class="link-list"><a class="header__menu-item header__menu-item_active" href="./index.html">Главная</a></li>
+          <li class="link-list"><a class="header__menu-item" href="./about.html">О проекте</a></li>
+        </ul>
       </header>
       <div class="head-block__content">
         <h1 class="head-block__title">Что в мире творится?</h1>
@@ -27,50 +27,54 @@
           <button class="head-block__search-button">Искать</button>
         </div>
       </div>
-    </section>
+    </main>
     <section class="searching main-block main-block_gray">
       <i class="circle-preloader"></i>
       <p class="text text-center">Идет поиск новостей...</p>
     </section>
     <section class="main-block main-block_gray no-result">
         <div class="no-result__image">
-          <img src="<%=('../images/not-found_v1.svg')%>" alt="Image not found">
+          <img src="<%=require('../images/not-found_v1.svg').default%>" alt='Пиктограмма новостей не найдено'>
         </div>
         <h4 class="title-mini title-mini_center">Ничего не найдено!</h4>
         <p class="text text-center">К сожалению по вашему запросу ничего не найдено.</p>
     </section>
-    <section class="results main-block main-block_gray">
+    <article class="results main-block main-block_gray">
       <div class="title-link-container">
         <h3 class="title">Результаты поиска</h3>
         <a class="link-text text-right" href="./analytics.html">Посмотреть аналитику &gt;</a>
       </div>
-      <div class="results__cards-container">
+      <section class="results__cards-container">
         <div class="results__card">
-          <img class="results__card-cover" src="<%=('../images/image_08.png')%>" alt="">
+          <img class="results__card-cover" src="<%=require('../images/image_08.png').default%>" alt="Обложка к новости">
           <p class="results__card-content date">2 августа, 2019</p>
           <h4 class="results__card-content title-mini">Национальное достояние — парки</h4>
           <p class="results__card-content text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
           <p class="results__card-content source">Лента.ру</p>
         </div>
         <div class="results__card">
-          <img class="results__card-cover" src="<%=('../images/image_08.png')%>" alt="">
+          <img class="results__card-cover" src="<%=require('../images/image_08.png').default%>" alt="Обложка к новости">
           <p class="results__card-content date">2 августа, 2019</p>
           <h4 class="results__card-content title-mini">Национальное достояние</h4>
           <p class="results__card-content text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
           <p class="results__card-content source">Лента.ру</p>
         </div>
         <div class="results__card">
-          <img class="results__card-cover" src="<%=('../images/image_08.png')%>" alt="">
+          <img class="results__card-cover" src="<%=require('../images/image_08.png').default%>" alt="Обложка к новости">
           <p class="results__card-content date">2 августа, 2019</p>
           <h4 class="results__card-content title-mini">Национальное достояние</h4>
           <p class="results__card-content text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
           <p class="results__card-content source">Лента.ру</p>
         </div>
-      </div>
+      </section>
       <button class="button text text-center">Показать еще</button>
-    </section>
+    </article>
     <section class="about-author main-block main-block_white">
-      <img class="about-author__img" src="<%=('../images/userimage.jpg')%>" alt="Фото автора">
+      <picture class="about-author__picture">
+        <source media="(max-width: 799px)" srcset="<%=require('../images/userimage_miniscreen.jpg').default%>">
+        <source media="(min-width: 800px)" srcset="<%=require('../images/userimage.jpg').default%>">
+        <img class="about-author__img" src="<%=require('../images/userimage.jpg').default%>" alt="Фото автора">
+      </picture>
       <div class="about-author__info-container">
         <h3 class="title">Александр Афанасенко</h3>
         <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут.</p>
@@ -79,15 +83,23 @@
     </section>
     <footer class='footer'>
       <div class="footer__copyright">&copy;2019 Alaksandr Afanasienka</div>
-      <div class="footer__links-container">
-        <a class="link-text" href="./index.html">Главная</a>
-        <a class="link-text" href="./about.html">О проекте</a>
-        <a class="link-text" href='https://praktikum.yandex.ru/profile/frontend-developer/'>Яндекс.Практикум</a>
-      </div>
-      <div class="footer__social-networks">
-        <a class='footer__icon-link' href="https://github.com/sasaafanasienka/DiplomaProject2"><img src="<%=('../images/Github_logo.svg')%>" alt="Github logo"></a>
-        <a class='footer__icon-link' href="https://www.facebook.com/sasaafanasienka"><img src="<%=('../images/Facebook_logo.svg')%>" alt="Facebook logo"></a>
-      </div>
+      <nav><ul class="footer__links-container">
+        <li class="link-list"><a class='link-text' href="./index.html">Главная</a></li>
+        <li class="link-list"><a class='link-text' href="./about.html">О проекте</a></li">
+        <li class="link-list"><a class='link-text' href='https://praktikum.yandex.ru/profile/frontend-developer/' target="_blank">Яндекс.Практикум</a></li>
+      </ul></nav>
+      <ul class="footer__social-networks">
+        <li class="link-list">
+          <a class='footer__icon-link' href="https://github.com/sasaafanasienka/DiplomaProject2" target="_blank">
+            <img src="<%=require('../images/Github_logo.svg').default%>" alt="Github logo">
+          </a>
+        </li>
+        <li class="link-list">
+          <a class='footer__icon-link' href="https://www.facebook.com/sasaafanasienka" target="_blank">
+            <img src="<%=require('../images/Facebook_logo.svg').default%>" alt="Facebook logo">
+          </a>
+        </li>
+      </ul>
     </footer>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>

@@ -12,10 +12,10 @@
   <body>
     <header class="header">
       <a class="header__logo" href="./index.html">NewsAnalyzer</a>
-      <div class="header__menu-container">
-        <a class="header__menu-item header__menu-item_black" href="./index.html">Главная</a>
-        <a class="header__menu-item" href="./about.html">О проекте</a>
-      </div>
+      <ul class="header__menu-container">
+        <li class="link-list"><a class="header__menu-item header__menu-item_black" href="./index.html">Главная</a></li>
+        <li class="link-list"><a class="header__menu-item" href="./about.html">О проекте</a></li>
+      </ul>
     </header>
     <section class="current-adress main-block main-block_white">
         <p class="current-adress__path text text-left">Главная <span class="text-gray">/ Аналитика</span></p>
@@ -23,7 +23,7 @@
         <p class="text text-left">Новостей за неделю: <b>22 353</b></p>
         <p class="text text-left">Упоминаний в заголовках: <b>253</b></p>
     </section>
-    <section class="graph">
+    <article class="graph">
         <div class="graph__title">Аналитика по дням</div>
         <div class="graph__container">
           <div class="graph__head-container">
@@ -75,9 +75,13 @@
             <div class="graph__axis-number">100</div>            
           </div>
         </div>
-    </section>
+    </article>
     <section class="about-author main-block main-block_white">
-      <img class="about-author__img" src="<%=('../images/userimage.jpg')%>" alt="Фото автора">
+      <picture class="about-author__picture">
+        <source media="(max-width: 799px)" srcset="<%=require('../images/userimage_miniscreen.jpg').default%>">
+        <source media="(min-width: 800px)" srcset="<%=require('../images/userimage.jpg').default%>">
+        <img class="about-author__img" src="<%=require('../images/userimage.jpg').default%>" alt="Фото автора">
+      </picture>
       <div class="about-author__info-container">
         <h3 class="title">Александр Афанасенко</h3>
         <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут.</p>
@@ -86,15 +90,23 @@
     </section>
     <footer class='footer'>
       <div class="footer__copyright">&copy;2019 Alaksandr Afanasienka</div>
-      <div class="footer__links-container">
-        <a class="link-text" href="./index.html">Главная</a>
-        <a class="link-text" href="./about.html">О проекте</a>
-        <a class="link-text" href='https://praktikum.yandex.ru/profile/frontend-developer/'>Яндекс.Практикум</a>
-      </div>
-      <div class="footer__social-networks">
-        <a class='footer__icon-link' href="https://github.com/sasaafanasienka/DiplomaProject2"><img src="<%=('../images/Github_logo.svg')%>" alt="Github logo"></a>
-        <a class='footer__icon-link' href="https://www.facebook.com/sasaafanasienka"><img src="<%=('../images/Facebook_logo.svg')%>" alt="Facebook logo"></a>
-      </div>
+      <nav><ul class="footer__links-container">
+        <li class="link-list"><a class='link-text' href="./index.html">Главная</a></li>
+        <li class="link-list"><a class='link-text' href="./about.html">О проекте</a></li">
+        <li class="link-list"><a class='link-text' href='https://praktikum.yandex.ru/profile/frontend-developer/' target="_blank">Яндекс.Практикум</a></li>
+      </ul></nav>
+      <ul class="footer__social-networks">
+        <li class="link-list">
+          <a class='footer__icon-link' href="https://github.com/sasaafanasienka/DiplomaProject2" target="_blank">
+            <img src="<%=('../images/Github_logo.svg')%>" alt="Github logo">
+          </a>
+        </li>
+        <li class="link-list">
+          <a class='footer__icon-link' href="https://www.facebook.com/sasaafanasienka" target="_blank">
+            <img src="<%=('../images/Facebook_logo.svg')%>" alt="Facebook logo">
+          </a>
+        </li>
+      </ul>
     </footer>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
