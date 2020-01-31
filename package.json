@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/sasaafanasienka/DiplomaProject2/issues"
   },
-  "homepage": "https://github.com/sasaafanasienka/diplomaproject2.github.io/",
+  "homepage": "https://github.com/sasaafanasienka/DiplomaProject2.github.io/",
   "devDependencies": {
     "@babel/cli": "7.7.7",
     "@babel/core": "7.7.7",

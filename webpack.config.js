@@ -28,19 +28,8 @@ module.exports = {
                   {
                     loader: MiniCssExtractPlugin.loader,
                     options: { publicPath: '../', }
-                  },
-                  {
-                    loader: 'css-loader',
-                    options: { importLoaders: 1 },
-                  },
-                  {
-                    loader: 'postcss-loader',
-                    options: {
-                      config: {
-                        path: __dirname + '/postcss.config.js'
-                      }
-                    },
-                  },
+                  }, 
+                  'css-loader', 'postcss-loader',
                 ],
               },
             {
