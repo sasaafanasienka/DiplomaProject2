@@ -1,0 +1,26 @@
+.swiper-gradient_left {
+    position: absolute;
+    width: 7.2%;
+    height: 100%;
+    z-index: 2;
+    left: 0;
+    background: rgb(245,246,247);
+    background: linear-gradient(90deg, rgba(245,246,247,1) 0%, rgba(245,246,247,0) 100%);
+}
+
+.swiper-gradient_right {
+    position: absolute;
+    width: 7.2%;
+    height: 100%;
+    z-index: 2;
+    right: 0;
+    background: rgb(245,246,247);
+    background: linear-gradient(-90deg, rgba(245,246,247,1) 0%, rgba(245,246,247,0) 100%);
+}
+
+@media (max-width: 1000px) {
+    .swiper-gradient_left,
+    .swiper-gradient_right {
+        width: 5.1%;
+    }
+}

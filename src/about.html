@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Cервис для анализа происходящих в мире событий">
+  <meta name="author" content="Alaksandr Afanasienka">
+  <title>NewsAnalyzer</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css%>">
+</head>
+  <body>
+    <header class="header">
+      <a class="header__logo" href="./index.html">NewsAnalyzer</a>
+      <ul class="header__menu-container">
+        <li class='link-list'><a class="header__menu-item" href="./index.html">Главная</a></li>
+        <li class='link-list'><a class="header__menu-item header__menu-item_active" href="./about.html">О проекте</a></li>
+      </ul>
+    </header>
+    <section class="info main-block main-block_white">
+        <h3 class="title">Клиентам</h3>
+        <p class="text text-left">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.</p>
+        <p class="text text-left">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы 
+          и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+        <p class="text text-left">Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока 
+          от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
+        <p class="text text-left">При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. 
+          Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если посетители — пользователи 
+          старых операционных систем, у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.</p>
+        <p class="text text-left">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+    </section>
+    <section class="tehnologies main-block main-block_gray">
+        <h3 class="title">Используемые технологии</h3>
+        <div class="tehnologies__container">
+          <div class="tehnologies__item">
+            <div class="tehnologies__title">HTML</div>
+            <img class='tehnologies__img' src="<%=require('../images/html_logo.svg').default%>" alt="HTML logo">
+          </div>  
+          <div class="tehnologies__item">
+            <div class="tehnologies__title">CSS</div>
+            <img class='tehnologies__img' src="<%=require('../images/css_logo.svg').default%>" alt="CSS logo">
+          </div>  
+          <div class="tehnologies__item">
+            <div class="tehnologies__title">JavaScript</div>
+            <img class='tehnologies__img' src="<%=require('../images/js_logo.svg').default%>" alt="GitHub logo">
+          </div>  
+          <div class="tehnologies__item">
+            <div class="tehnologies__title">Webpack</div>
+            <img class='tehnologies__img' src="<%=require('../images/webpack_logo.svg').default%>" alt="Webpack logo">
+          </div>  
+        </div>
+    </section>
+    <section class="about-author main-block main-block_white">
+      <picture class="about-author__picture">
+        <source media="(max-width: 799px)" srcset="<%=require('../images/userimage_miniscreen.jpg').default%>">
+        <source media="(min-width: 800px)" srcset="<%=require('../images/userimage.jpg').default%>">
+        <img class="about-author__img" src="<%=require('../images/userimage.jpg').default%>" alt="Фото автора">
+      </picture>
+      <div class="about-author__info-container">
+        <h3 class="title">Александр Афанасенко</h3>
+        <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут.</p>
+        <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
+      </div>
+    </section>
+    <section class='commits main-block_commits'>
+      <div class="title-link-container">
+        <h3 class="title">История коммитов из GitHub</h3>
+        <a class="link-text text-right" href='https://github.com/sasaafanasienka/DiplomaProject2' target="_blank">Открыть в GitHub &gt;</a>
+      </div>
+      <!-- Сторонний свайпер -->
+
+      <div class="swiper-container"> 
+
+        <div class="swiper-gradient_left"></div>
+        <div class="swiper-gradient_right"></div>
+
+        <!-- Additional requiredd wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <p class="date">2 августа, 2019</p>
+              <div class="swiper-slide__head-container">
+                <div class="swiper-slide__icon">
+                  <img class="swiper-slide__img" alt='Фото автора коммита' src="<%=require('../images/userimage.jpg').default%>">
+                </div>
+                <div class="swiper-slide__title-container">
+                  <h4 class="title-mini">Первый слайд</h4>
+                  <p class="swiper-slide__email">afanasienka@yandex.by</p>    
+                </div>
+              </div>
+              <p class="text">В 2016 году Америка отываться риторий, где и сегодня каждый может приобщиться к природе.</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="date">2 августа, 2019</p>
+              <div class="swiper-slide__head-container">
+                <div class="swiper-slide__icon">
+                  <img class="swiper-slide__img" alt='Фото автора коммита' src="<%=require('../images/userimage.jpg').default%>">
+                </div>
+                <div class="swiper-slide__title-container">
+                  <h4 class="title-mini">Второй слайд</h4>
+                  <p class="swiper-slide__email">afanasienka@yandex.by</p>    
+                </div>
+              </div>
+              <p class="text">ональных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="date">2 августа, 2019</p>
+              <div class="swiper-slide__head-container">
+                <div class="swiper-slide__icon">
+                  <img class="swiper-slide__img" alt='Фото автора коммита' src="<%=require('../images/userimage.jpg').default%>">
+                </div>
+                <div class="swiper-slide__title-container">
+                  <h4 class="title-mini">Национальное достояние</h4>
+                  <p class="swiper-slide__email">afanasienka@yandex.by</p>    
+                </div>
+              </div>
+              <p class="text">В 2016 году Америка отмечала важный юбилей: сх парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="date">2 августа, 2019</p>
+              <div class="swiper-slide__head-container">
+                <div class="swiper-slide__icon">
+                  <img class="swiper-slide__img" alt='Фото автора коммита' src="<%=require('../images/userimage.jpg').default%>">
+                </div>
+                <div class="swiper-slide__title-container">
+                  <h4 class="title-mini">Национальное достояние</h4>
+                  <p class="swiper-slide__email">afanasienka@yandex.by</p>    
+                </div>
+              </div>
+              <p class="text">В 2016 году Америка отмечала важьных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="date">2 августа, 2019</p>
+              <div class="swiper-slide__head-container">
+                <div class="swiper-slide__icon">
+                  <img class="swiper-slide__img" alt='Фото автора коммита' src="<%=require('../images/userimage.jpg').default%>">
+                </div>
+                <div class="swiper-slide__title-container">
+                  <h4 class="title-mini">Национальное достояние</h4>
+                  <p class="swiper-slide__email">afanasienka@yandex.by</p>    
+                </div>
+              </div>
+              <p class="text">В 2016 году система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            </div>
+
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <footer class='footer'>
+      <div class="footer__copyright">&copy;2019 Alaksandr Afanasienka</div>
+      <nav><ul class="footer__links-container">
+        <li class="link-list"><a class='link-text' href="./index.html">Главная</a></li>
+        <li class="link-list"><a class='link-text' href="./about.html">О проекте</a></li">
+        <li class="link-list"><a class='link-text' href='https://praktikum.yandex.ru/profile/frontend-developer/' target="_blank">Яндекс.Практикум</a></li>
+      </ul></nav>
+      <ul class="footer__social-networks">
+        <li class="link-list">
+          <a class='footer__icon-link' href="https://github.com/sasaafanasienka/DiplomaProject2" target="_blank">
+            <img src="<%=('../images/Github_logo.svg')%>" alt="Github logo">
+          </a>
+        </li>
+        <li class="link-list">
+          <a class='footer__icon-link' href="https://www.facebook.com/sasaafanasienka" target="_blank">
+            <img src="<%=('../images/Facebook_logo.svg')%>" alt="Facebook logo">
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+
+    <script>
+      let slidesCount;
+      let slidesCentered;
+      let marginLeft;
+
+      numberOfSlides();
+
+      function numberOfSlides() {
+          if (document.documentElement.clientWidth > 1200) {
+            marginLeft = document.documentElement.clientWidth * 0.071;
+            slidesCount = 3.5;
+            slidesCentered = false;
+          } else if (document.documentElement.clientWidth > 1000) {
+            marginLeft = document.documentElement.clientWidth * 0.071;
+            slidesCount = 2.35;
+            slidesCentered = true;
+          } else if (document.documentElement.clientWidth > 750) {
+            marginLeft = document.documentElement.clientWidth * 0.051;
+            slidesCount = 2.22;
+            slidesCentered = false;
+          } else if (document.documentElement.clientWidth > 0) {
+            marginLeft = document.documentElement.clientWidth * 0.051;
+            slidesCount = 1.11;
+            slidesCentered = true;
+          }
+          var mySwiper = new Swiper ('.swiper-container', {
+          slidesPerView: slidesCount,
+          spaceBetween: 10,
+          initialSlide:	0,
+          grabCursor: true,
+          roundLengths: true,
+          slidesOffsetBefore: marginLeft,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          })
+      }
+
+      window.addEventListener("resize", numberOfSlides);
+
+      </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+@import url(./__content/head-block__content.css);
+@import url(./__search-button/head-block__search-button.css);
+@import url(./__search-container/head-block__search-container.css);
+@import url(./__search-input/head-block__search-input.css);
+@import url(./__subtitle/head-block__subtitle.css);
+@import url(./__title/head-block__title.css);
+
+.head-block {
+    width: 100%;
+    height: 100%;
+    background-image: url('D:/Yandex.Praktikum/DiplomaProject2/images/mainimage.jpg');
+    background-position: center;
+    background-size: cover;
+    margin-top: 0;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 1000px) {
+    .head-block {
+        padding-bottom: 50px;
+    }
+}
+@media (max-width: 500px) {
+    .head-block {
+        padding-bottom: 32px;
+    }
+}
+
+

@@ -1,0 +1,13 @@
+:root {
+    /* --main-black-color: red; */
+    --main-black-color: #1A1B22;
+    --main-darkgray-color: #B6BCBF;
+  }
+
+body {
+    margin: 0;
+}
+
+ul {
+  padding: 0;
+}

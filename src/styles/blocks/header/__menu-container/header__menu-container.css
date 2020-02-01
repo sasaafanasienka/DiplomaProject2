@@ -1,0 +1,11 @@
+.header__menu-container {
+    height: 100%;
+    display: flex;
+    list-style-type: none;
+}
+
+@media (max-width: 500px) {
+    .header__menu-container {
+    padding-left: 0;
+    }
+}

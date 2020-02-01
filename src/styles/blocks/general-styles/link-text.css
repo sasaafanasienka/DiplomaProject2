@@ -1,0 +1,26 @@
+
+.link-text {
+    cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    /* border: 1px solid red */
+    transition: opacity 0.4s linear 0s;
+    text-decoration: none;
+}
+
+.link-text:hover {
+    opacity: .7;
+}
+.link-text:visited {
+    color: var(--main-black-color);
+}
+@media (max-width: 500px) {
+    .link-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

@@ -1,0 +1,39 @@
+@import url(./__logo/header__logo.css);
+@import url(./__menu-container/header__menu-container.css);
+@import url(./__menu-item/header__menu-item.css);
+
+.header {
+    box-sizing: border-box;
+    height: 80px;
+    display: flex;
+    padding: 5px 7.2% 0 7.2%;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.head-block .header {
+    margin-bottom: 80px;
+    border-bottom-color: rgba(196, 196, 196, 0.01);
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1000px) {
+    .header {
+        padding-left: 5.1%;
+        padding-right: 5.1%;
+        margin-bottom: 38px;
+        height: 66px;
+    }
+}
+@media (max-width: 500px) {
+    .header {
+        margin-bottom: 0px;
+        height: 56px;
+    }
+    .head-block .header {
+        margin-bottom: 0;
+    }
+}
+

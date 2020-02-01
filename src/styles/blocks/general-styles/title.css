@@ -1,0 +1,69 @@
+.title {
+    width: 100%;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 46px;
+    color: var(--main-black-color);
+    margin-top: 0;
+    margin-bottom: 21px;
+}
+.info .title {
+    width: 65%;
+}
+.tehnologies .title {
+    width: 30%;
+}
+.about-author__info-container .title {
+    margin-top: 50px;
+}
+.title-link-container .title {
+    width: 70%;
+}
+.current-adress .title {
+    margin-top: 80px;
+    margin-bottom: 24px;
+}
+@media (max-width: 1000px) {
+    .title {
+        font-size: 30px;
+        line-height: 34px;
+        margin-bottom: 12px;
+    }
+    .about-author__info-container .title {
+        margin-top: 20px;
+    }
+    .title-link-container .title {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    /* .title {
+        margin-bottom: 19px;
+        line-height: 40px;
+    }
+    .about-author__info-container .title {
+        margin-top: 0;
+    } */
+    .title-link-container .title {
+        margin-bottom: 10px;
+    }
+    .current-adress .title {
+        margin-top: 0px;
+        margin-bottom: 12px;
+    }
+}
+@media (max-width: 500px) {
+    .title {
+        margin-bottom: 19px;
+        line-height: 40px;
+    }
+    .about-author__info-container .title {
+        margin-top: 0;
+    }
+    .title-link-container .title {
+        width: 60%;
+    }
+}

@@ -1,0 +1,22 @@
+.tehnologies__container {
+    display: flex;
+}
+
+@media (max-width: 1200px) {
+    .tehnologies__container {
+        align-self: flex-end;
+    }
+}
+@media (max-width: 800px) {
+    .tehnologies__container {
+        align-self: auto;
+        align-items: stretch;
+    }
+}
+@media (max-width: 500px) {
+    .tehnologies__container {
+        flex-wrap: wrap;
+        align-self: auto;
+        align-items: stretch;
+    }
+}

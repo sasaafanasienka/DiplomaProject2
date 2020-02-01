@@ -1,0 +1,11 @@
+.swiper-container {
+    width: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 800px) {
+    .swiper-container {
+        align-self: auto;
+        align-items: stretch;
+    }
+}

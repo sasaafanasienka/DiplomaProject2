@@ -1,0 +1,15 @@
+.head-block__content {
+    width: 42%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .head-block__content {
+        width: 58%;
+    }
+}
+@media (max-width: 500px) {
+    .head-block__content {
+        width: 90%;
+    }
+}

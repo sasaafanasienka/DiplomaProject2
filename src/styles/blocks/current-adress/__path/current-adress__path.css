@@ -1,0 +1,9 @@
+.current-adress__path {
+
+}
+
+@media (max-width: 600px) {
+    .current-adress__path {
+        display: none;
+    }
+}

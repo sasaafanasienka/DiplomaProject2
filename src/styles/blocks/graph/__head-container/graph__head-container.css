@@ -1,0 +1,11 @@
+.graph__head-container {
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--main-black-color);
+}
+
+@media (max-width:500px) {
+    .graph__head-container {
+        margin-bottom: 19px;
+    }
+}
