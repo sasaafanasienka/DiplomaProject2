@@ -7,7 +7,8 @@
   <meta name="description" content="Cервис для анализа происходящих в мире событий">
   <meta name="author" content="Alaksandr Afanasienka">
   <title>NewsAnalyzer</title>
-  <link rel="stylesheet" href="./styles/style.f389eab1f4a95d34c9dc.css">
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+  <link rel="stylesheet" href="./styles/style.b974a7a8ef139a2169f8.css">
 </head>
   <body>
     <header class="header">
@@ -77,7 +78,7 @@
         <!-- Additional requiredd wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <p class="date">2 августа, 2019</p>
               <div class="swiper-slide__head-container">
                 <div class="swiper-slide__icon">
@@ -89,60 +90,7 @@
                 </div>
               </div>
               <p class="text">В 2016 году Америка отываться риторий, где и сегодня каждый может приобщиться к природе.</p>
-            </div>
-            <div class="swiper-slide">
-              <p class="date">2 августа, 2019</p>
-              <div class="swiper-slide__head-container">
-                <div class="swiper-slide__icon">
-                  <img class="swiper-slide__img" alt='Фото автора коммита' src="./images/afd1d72509d2c7039818fb25c2bb2707.jpg">
-                </div>
-                <div class="swiper-slide__title-container">
-                  <h4 class="title-mini">Второй слайд</h4>
-                  <p class="swiper-slide__email">afanasienka@yandex.by</p>    
-                </div>
-              </div>
-              <p class="text">ональных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            </div>
-            <div class="swiper-slide">
-              <p class="date">2 августа, 2019</p>
-              <div class="swiper-slide__head-container">
-                <div class="swiper-slide__icon">
-                  <img class="swiper-slide__img" alt='Фото автора коммита' src="./images/afd1d72509d2c7039818fb25c2bb2707.jpg">
-                </div>
-                <div class="swiper-slide__title-container">
-                  <h4 class="title-mini">Национальное достояние</h4>
-                  <p class="swiper-slide__email">afanasienka@yandex.by</p>    
-                </div>
-              </div>
-              <p class="text">В 2016 году Америка отмечала важный юбилей: сх парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            </div>
-            <div class="swiper-slide">
-              <p class="date">2 августа, 2019</p>
-              <div class="swiper-slide__head-container">
-                <div class="swiper-slide__icon">
-                  <img class="swiper-slide__img" alt='Фото автора коммита' src="./images/afd1d72509d2c7039818fb25c2bb2707.jpg">
-                </div>
-                <div class="swiper-slide__title-container">
-                  <h4 class="title-mini">Национальное достояние</h4>
-                  <p class="swiper-slide__email">afanasienka@yandex.by</p>    
-                </div>
-              </div>
-              <p class="text">В 2016 году Америка отмечала важьных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            </div>
-            <div class="swiper-slide">
-              <p class="date">2 августа, 2019</p>
-              <div class="swiper-slide__head-container">
-                <div class="swiper-slide__icon">
-                  <img class="swiper-slide__img" alt='Фото автора коммита' src="./images/afd1d72509d2c7039818fb25c2bb2707.jpg">
-                </div>
-                <div class="swiper-slide__title-container">
-                  <h4 class="title-mini">Национальное достояние</h4>
-                  <p class="swiper-slide__email">afanasienka@yandex.by</p>    
-                </div>
-              </div>
-              <p class="text">В 2016 году система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            </div>
-
+            </div> -->
         </div>
 
         <!-- If we need pagination -->
@@ -164,65 +112,16 @@
       <ul class="footer__social-networks">
         <li class="link-list">
           <a class='footer__icon-link' href="https://github.com/sasaafanasienka/DiplomaProject2" target="_blank">
-            <img src="../images/Github_logo.svg" alt="Github logo">
+            <img src="./images/f1be469f431ac8f1a6444688e9657b38.svg" alt="Github logo">
           </a>
         </li>
         <li class="link-list">
           <a class='footer__icon-link' href="https://www.facebook.com/sasaafanasienka" target="_blank">
-            <img src="../images/Facebook_logo.svg" alt="Facebook logo">
+            <img src="./images/400b31da08bea4d92e859c0373e85f8b.svg" alt="Facebook logo">
           </a>
         </li>
       </ul>
     </footer>
-    <script src="./scripts/about.59ad754e371f19142121.js"></script>
-
-    <script>
-      let slidesCount;
-      let slidesCentered;
-      let marginLeft;
-
-      numberOfSlides();
-
-      function numberOfSlides() {
-          if (document.documentElement.clientWidth > 1200) {
-            marginLeft = document.documentElement.clientWidth * 0.071;
-            slidesCount = 3.5;
-            slidesCentered = false;
-          } else if (document.documentElement.clientWidth > 1000) {
-            marginLeft = document.documentElement.clientWidth * 0.071;
-            slidesCount = 2.35;
-            slidesCentered = true;
-          } else if (document.documentElement.clientWidth > 750) {
-            marginLeft = document.documentElement.clientWidth * 0.051;
-            slidesCount = 2.22;
-            slidesCentered = false;
-          } else if (document.documentElement.clientWidth > 0) {
-            marginLeft = document.documentElement.clientWidth * 0.051;
-            slidesCount = 1.11;
-            slidesCentered = true;
-          }
-          var mySwiper = new Swiper ('.swiper-container', {
-          slidesPerView: slidesCount,
-          spaceBetween: 10,
-          initialSlide:	0,
-          grabCursor: true,
-          roundLengths: true,
-          slidesOffsetBefore: marginLeft,
-          loop: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-          })
-      }
-
-      window.addEventListener("resize", numberOfSlides);
-
-      </script>
+    <script src="./scripts/about.dfb361a6fe8ecea43026.js"></script>
   </body>
 </html>
