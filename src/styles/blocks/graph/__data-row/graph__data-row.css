@@ -1,18 +1,5 @@
 .graph__data-row {
-    width: 92%;
     height: 24px;
-
     background-color: #2F71E5;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 16px;
-    display: flex;
-    color: white;
-    align-items: center;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    padding-left: 8px;
+    position: relative;
     }

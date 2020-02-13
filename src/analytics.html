@@ -7,6 +7,7 @@
   <meta name="description" content="Cервис для анализа происходящих в мире событий">
   <meta name="author" content="Alaksandr Afanasienka">
   <title>NewsAnalyzer</title>
+  <link rel="shortcut icon" type="image/png" href="<%=('./images/favicon.png')%>"/>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css%>">
 </head>
   <body>
@@ -19,68 +20,75 @@
     </header>
     <section class="current-adress main-block main-block_white">
         <p class="current-adress__path text text-left">Главная <span class="text-gray">/ Аналитика</span></p>
-        <h3 class="title">Вы спросили: Путешествия</h3>
-        <p class="text text-left">Новостей за неделю: <b>22 353</b></p>
-        <p class="text text-left">Упоминаний в заголовках: <b>253</b></p>
+        <h3 class="title analytics__title">Вы спросили: Путешествия</h3>
+        <p class="text text-left">Упоминаний за неделю: <b class="analytics__news-number">22 353</b></p>
+        <p class="text text-left">Упоминаний в заголовках: <b class="analytics__titles-number">253</b></p>
     </section>
     <article class="graph">
         <div class="graph__title">Аналитика по дням</div>
         <div class="graph__container">
           <div class="graph__head-container">
-            <div class="graph__head">дата (август)</div>
+            <div class="graph__head graph__head-month">дата (август)</div>
             <div class="graph__head">количество упоминаний</div>
           </div>
           <div class="graph__axis">
-            <div class="graph__axis-number">0</div>            
-            <div class="graph__axis-number">25</div>            
-            <div class="graph__axis-number">50</div>            
-            <div class="graph__axis-number">75</div>            
-            <div class="graph__axis-number">100</div>            
+            <div class="graph__axis-number graph__axis-number_1">0</div>            
+            <div class="graph__axis-number graph__axis-number_2">25</div>            
+            <div class="graph__axis-number graph__axis-number_3">50</div>            
+            <div class="graph__axis-number graph__axis-number_4">75</div>            
+            <div class="graph__axis-number graph__axis-number_5">100</div>            
           </div>
           <div>
-            <div class="graph__data">
-              <div class="graph__data-date">19, пн</div>
-              <div class="graph__data-row">33</div>
+            <div class="graph__data graph__data_1">
+              <div class="graph__data-date graph__data-date_1">19, пн</div>
+              <div class="graph__data-row graph__data-row_1">
+              </div>
             </div>
-            <div class="graph__data">
-              <div class="graph__data-date">20, вт</div>
-              <div class="graph__data-row">33</div>
+            <div class="graph__data graph__data_2">
+              <div class="graph__data-date graph__data-date_2">20, вт</div>
+              <div class="graph__data-row graph__data-row_2">
+              </div>
             </div>
-            <div class="graph__data">
-              <div class="graph__data-date">21, ср</div>
-              <div class="graph__data-row">33</div>
+            <div class="graph__data graph__data_3">
+              <div class="graph__data-date graph__data-date_3">21, ср</div>
+              <div class="graph__data-row graph__data-row_3">
+              </div>
             </div>
-            <div class="graph__data">
-              <div class="graph__data-date">22, чт</div>
-              <div class="graph__data-row">33</div>
+            <div class="graph__data graph__data_4">
+              <div class="graph__data-date graph__data-date_4">22, чт</div>
+              <div class="graph__data-row graph__data-row_4">
+              </div>
             </div>
-            <div class="graph__data">
-              <div class="graph__data-date">23, пт</div>
-              <div class="graph__data-row">33</div>
+            <div class="graph__data graph__data_5">
+              <div class="graph__data-date graph__data-date_5">23, пт</div>
+              <div class="graph__data-row graph__data-row_5">
+              </div>
             </div>
-            <div class="graph__data">
-              <div class="graph__data-date">24, сб</div>
-              <div class="graph__data-row">33</div>
+            <div class="graph__data graph__data_6">
+              <div class="graph__data-date graph__data-date_6">24, сб</div>
+              <div class="graph__data-row graph__data-row_6">
+              </div>
             </div>
-            <div class="graph__data">
-              <div class="graph__data-date">25, вс</div>
-              <div class="graph__data-row">33</div>
+            <div class="graph__data graph__data_7">
+              <div class="graph__data-date graph__data-date_7">25, вс</div>
+              <div class="graph__data-row graph__data-row_7">
+              </div>
             </div>
           </div>
           <div class="graph__axis">
-            <div class="graph__axis-number">0</div>            
-            <div class="graph__axis-number">25</div>            
-            <div class="graph__axis-number">50</div>            
-            <div class="graph__axis-number">75</div>            
-            <div class="graph__axis-number">100</div>            
+            <div class="graph__axis-number graph__axis-number_6">0</div>            
+            <div class="graph__axis-number graph__axis-number_7">25</div>            
+            <div class="graph__axis-number graph__axis-number_8">50</div>            
+            <div class="graph__axis-number graph__axis-number_9">75</div>            
+            <div class="graph__axis-number graph__axis-number_10">100</div>            
           </div>
         </div>
     </article>
     <section class="about-author main-block main-block_white">
       <picture class="about-author__picture">
-        <source media="(max-width: 799px)" srcset="<%=require('../images/userimage_miniscreen.jpg').default%>">
-        <source media="(min-width: 800px)" srcset="<%=require('../images/userimage.jpg').default%>">
-        <img class="about-author__img" src="<%=require('../images/userimage.jpg').default%>" alt="Фото автора">
+        <source media="(max-width: 799px)" srcset="<%=require('./images/userimage_miniscreen.jpg').default%>">
+        <source media="(min-width: 800px)" srcset="<%=require('./images/userimage.jpg').default%>">
+        <img class="about-author__img" src="<%=require('./images/userimage.jpg').default%>" alt="Фото автора">
       </picture>
       <div class="about-author__info-container">
         <h3 class="title">Александр Афанасенко</h3>
@@ -98,12 +106,12 @@
       <ul class="footer__social-networks">
         <li class="link-list">
           <a class='footer__icon-link' href="https://github.com/sasaafanasienka/DiplomaProject2" target="_blank">
-            <img src="<%=('../images/Github_logo.svg')%>" alt="Github logo">
+            <img src="<%=require('./images/Github_logo.svg').default%>" alt="Github logo">
           </a>
         </li>
         <li class="link-list">
           <a class='footer__icon-link' href="https://www.facebook.com/sasaafanasienka" target="_blank">
-            <img src="<%=('../images/Facebook_logo.svg')%>" alt="Facebook logo">
+            <img src="<%=require('./images/Facebook_logo.svg').default%>" alt="Facebook logo">
           </a>
         </li>
       </ul>

@@ -15,9 +15,16 @@
     line-height: 22px;
     margin-top: 0;
 }
+.results__card .date {
+    margin-top: 20px;
+}
+
 @media (max-width: 1000px) {
     .date {
         margin-top: 10px;
+    }
+    .results__card .date {
+        margin-top: 16px;
     }
 }
 @media (max-width: 500px) {

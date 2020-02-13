@@ -4,11 +4,12 @@
 @import url(./__search-input/head-block__search-input.css);
 @import url(./__subtitle/head-block__subtitle.css);
 @import url(./__title/head-block__title.css);
+@import url(./__validation-text/head-block__validation-text.css);
 
 .head-block {
     width: 100%;
     height: 100%;
-    background-image: url('D:/Yandex.Praktikum/DiplomaProject2/images/mainimage.jpg');
+    background-image: url('../../../images/mainimage.jpg');
     background-position: center;
     background-size: cover;
     margin-top: 0;

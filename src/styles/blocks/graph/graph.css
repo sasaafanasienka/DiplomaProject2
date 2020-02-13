@@ -5,6 +5,7 @@
 @import url(./__data/graph__data.css);
 @import url(./__data-row/graph__data-row.css);
 @import url(./__data-date/graph__data-date.css);
+@import url(./__data-text/graph__data-text.css);
 @import url(./__axis/graph__axis.css);
 @import url(./__axis-number/graph__axis-number.css);
 

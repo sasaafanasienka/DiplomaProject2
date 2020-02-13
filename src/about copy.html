@@ -7,7 +7,6 @@
   <meta name="description" content="Cервис для анализа происходящих в мире событий">
   <meta name="author" content="Alaksandr Afanasienka">
   <title>NewsAnalyzer</title>
-  <link rel="shortcut icon" type="image/png" href="<%=('./images/favicon.png')%>"/>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css%>">
 </head>
   <body>
@@ -35,27 +34,27 @@
         <div class="tehnologies__container">
           <div class="tehnologies__item">
             <div class="tehnologies__title">HTML</div>
-            <img class='tehnologies__img' src="<%=require('./images/html_logo.svg').default%>" alt="HTML logo">
+            <img class='tehnologies__img' src="<%=require('../images/html_logo.svg').default%>" alt="HTML logo">
           </div>  
           <div class="tehnologies__item">
             <div class="tehnologies__title">CSS</div>
-            <img class='tehnologies__img' src="<%=require('./images/css_logo.svg').default%>" alt="CSS logo">
+            <img class='tehnologies__img' src="<%=require('../images/css_logo.svg').default%>" alt="CSS logo">
           </div>  
           <div class="tehnologies__item">
             <div class="tehnologies__title">JavaScript</div>
-            <img class='tehnologies__img' src="<%=require('./images/js_logo.svg').default%>" alt="GitHub logo">
+            <img class='tehnologies__img' src="<%=require('../images/js_logo.svg').default%>" alt="GitHub logo">
           </div>  
           <div class="tehnologies__item">
             <div class="tehnologies__title">Webpack</div>
-            <img class='tehnologies__img' src="<%=require('./images/webpack_logo.svg').default%>" alt="Webpack logo">
+            <img class='tehnologies__img' src="<%=require('../images/webpack_logo.svg').default%>" alt="Webpack logo">
           </div>  
         </div>
     </section>
     <section class="about-author main-block main-block_white">
       <picture class="about-author__picture">
-        <source media="(max-width: 799px)" srcset="<%=require('./images/userimage_miniscreen.jpg').default%>">
-        <source media="(min-width: 800px)" srcset="<%=require('./images/userimage.jpg').default%>">
-        <img class="about-author__img" src="<%=require('./images/userimage.jpg').default%>" alt="Фото автора">
+        <source media="(max-width: 799px)" srcset="<%=require('../images/userimage_miniscreen.jpg').default%>">
+        <source media="(min-width: 800px)" srcset="<%=require('../images/userimage.jpg').default%>">
+        <img class="about-author__img" src="<%=require('../images/userimage.jpg').default%>" alt="Фото автора">
       </picture>
       <div class="about-author__info-container">
         <h3 class="title">Александр Афанасенко</h3>
@@ -82,7 +81,7 @@
               <p class="date">2 августа, 2019</p>
               <div class="swiper-slide__head-container">
                 <div class="swiper-slide__icon">
-                  <img class="swiper-slide__img" alt='Фото автора коммита' src="<%=require('./images/userimage.jpg').default%>">
+                  <img class="swiper-slide__img" alt='Фото автора коммита' src="<%=require('../images/userimage.jpg').default%>">
                 </div>
                 <div class="swiper-slide__title-container">
                   <h4 class="title-mini">Первый слайд</h4>
@@ -112,16 +111,70 @@
       <ul class="footer__social-networks">
         <li class="link-list">
           <a class='footer__icon-link' href="https://github.com/sasaafanasienka/DiplomaProject2" target="_blank">
-            <img src="<%=require('./images/Github_logo.svg').default%>" alt="Github logo">
+            <img src="<%=('../images/Github_logo.svg')%>" alt="Github logo">
           </a>
         </li>
         <li class="link-list">
           <a class='footer__icon-link' href="https://www.facebook.com/sasaafanasienka" target="_blank">
-            <img src="<%=require('./images/Facebook_logo.svg').default%>" alt="Facebook logo">
+            <img src="<%=('../images/Facebook_logo.svg')%>" alt="Facebook logo">
           </a>
         </li>
       </ul>
     </footer>
     <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+
+    <script>
+      let slidesCount;
+      let slidesCentered;
+      let marginLeft;
+
+      function numberOfSlides() {
+
+          if (document.documentElement.clientWidth > 1200) {
+            marginLeft = document.documentElement.clientWidth * 0.071;
+            slidesCount = 3.5;
+            slidesCentered = false;
+          } else if (document.documentElement.clientWidth > 1000) {
+            marginLeft = document.documentElement.clientWidth * 0.071;
+            slidesCount = 2.35;
+            slidesCentered = true;
+          } else if (document.documentElement.clientWidth > 750) {
+            marginLeft = document.documentElement.clientWidth * 0.051;
+            slidesCount = 2.22;
+            slidesCentered = false;
+          } else if (document.documentElement.clientWidth > 0) {
+            marginLeft = document.documentElement.clientWidth * 0.051;
+            slidesCount = 1.11;
+            slidesCentered = true;
+          }
+
+          console.log(marginLeft);
+          console.log(slidesCount);
+          console.log(slidesCentered);
+
+          var mySwiper = new Swiper ('.swiper-container', {
+            slidesPerView: slidesCount,
+            spaceBetween: 10,
+            initialSlide:	0,
+            grabCursor: true,
+            roundLengths: true,
+            slidesOffsetBefore: marginLeft,
+            loop: true,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }
+          })
+      }
+
+      window.addEventListener("resize", numberOfSlides);
+
+      numberOfSlides;
+
+      </script>
   </body>
 </html>

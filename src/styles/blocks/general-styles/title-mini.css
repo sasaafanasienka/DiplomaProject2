@@ -7,7 +7,6 @@
     margin-top: 0px;
     margin-bottom: 24px;
     overflow: hidden;
-    /* text-color: var(--main-black-color); */
 }
 .title-mini_center {
     text-align: center;
@@ -17,12 +16,12 @@
     margin-bottom: 2px;
 }
 .results__card .title-mini {
-    max-height: 60px;
+    max-height: 90px;
     margin-bottom: 16px;
 }
 @media (max-width:1100px) {
     .results__card .title-mini {
-        max-height: 48px;
+        max-height: 72px;
         font-size: 22px;
         line-height: 24px;
         margin-bottom: 10px;    
@@ -30,6 +29,7 @@
 }
 @media (max-width:500px) {
     .results__card .title-mini {
+        max-height: 48px;
         margin-top: 10px;    
     }
 }

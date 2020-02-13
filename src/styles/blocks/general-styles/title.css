@@ -35,6 +35,7 @@
         margin-top: 20px;
     }
     .title-link-container .title {
+        margin-bottom: 0;
         width: 60%;
     }
 }

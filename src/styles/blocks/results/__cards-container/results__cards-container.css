@@ -1,17 +1,7 @@
 .results__cards-container {
+    max-height: 999999px; 
     width: 100%;
-    margin-bottom: 66px;
+    margin-bottom: 0;
     display: flex;
     flex-wrap: wrap;
-}
-
-@media (max-width:1000px) {
-    .results__cards-container {
-        margin-bottom: 30px;
-    }
-}
-@media (max-width:500px) {
-    .results__cards-container {
-        margin-bottom: 15px;
-    }
 }

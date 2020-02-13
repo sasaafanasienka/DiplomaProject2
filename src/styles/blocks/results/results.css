@@ -2,13 +2,26 @@
 @import url(./__card/results__card.css);
 @import url(./__card-content/results__card-content.css);
 @import url(./__card-cover/results__card-cover.css);
+@import url(./__card-button/results__card-button.css);
+@import url(./__text-container/results__text-container.css);
+@import url(./__outer-container/results__outer-container.css);
 
 .results {
+    max-height: 999999px;
     display: flex;
     flex-direction: column;
+}
+
+.results_display-none {
+    display: none;
 }
 
 /* .results_white {
     padding-top: 0px;
     background-color: #FFF;
+} */
+/* 
+.clone {
+    position: absolute;
+    visibility: hidden
 } */
