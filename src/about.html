@@ -7,7 +7,7 @@
   <meta name="description" content="Cервис для анализа происходящих в мире событий">
   <meta name="author" content="Alaksandr Afanasienka">
   <title>NewsAnalyzer</title>
-  <link rel="shortcut icon" type="image/png" href="<%=('./images/favicon.png')%>"/>
+  <link rel="shortcut icon" type="image/png" href="<%=require('./images/favicon.png').default%>"/>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css%>">
 </head>
   <body>
@@ -96,7 +96,6 @@
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
 
-        <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>

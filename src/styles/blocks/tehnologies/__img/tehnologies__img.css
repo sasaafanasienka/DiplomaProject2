@@ -1,0 +1,14 @@
+.tehnologies__img {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .tehnologies__img {
+        width: 75%;
+    }
+}
+@media (max-width: 500px) {
+    .tehnologies__img {
+        width: 60%;
+    }
+}

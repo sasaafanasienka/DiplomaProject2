@@ -1,15 +1,9 @@
-// Вычисление текущей даты и даты неделю назад в правильном формате
-export const date1 = new Date();
-export const curDate = date1;
-export const currentDate = date1.toJSON().slice(0,10);
-let date2 = new Date(date1.getFullYear(), date1.getMonth() , date1.getDate() - 5);
-export const pastDate = date2.toJSON().slice(0,10);
-
 //Преобразование формата даты
-import {months, ERRORMESSAGES} from './constants.js';
+import {months, ERRORMESSAGES, msPerDay, daysPerWeek} from './constants.js';
+import placeHoldImage from "../images/no_image_in_news.svg";
 
 export function dateTransform(dateOfPublication) {
-    let fulldate = new Date(dateOfPublication);
+    const fulldate = new Date(dateOfPublication);
     return `${fulldate.getDate()} ${months[fulldate.getMonth()][1]}, ${fulldate.getFullYear()}`;
 }
 
@@ -17,17 +11,26 @@ export function dateTransform(dateOfPublication) {
 export function changeImageToDefaultIfNeed(imageURL) {
     let image;
     if (imageURL === null) {
-        image = './images/no_image_in_news.svg';
+        image = placeHoldImage;
     } else {
+        image = placeHoldImage;
         image = imageURL;
     }
     return image;            
 }
 
 //Функция удаляет элемент, если он есть на странице
-export function deleteElement(parentNode, classElementToDelete) {
-if (document.querySelector(classElementToDelete) !== null) {                //если элемент есть на странице,
+export function removeElementByClassName(classElementToDelete, parentNode) {
+  if (document.querySelector(classElementToDelete) !== null) {                //если элемент есть на странице,
     parentNode.removeChild(document.querySelector(classElementToDelete));  //то ее нужно удалить
+    // console.log(`deleted element by class ${classElementToDelete}`)
+  }
+}
+
+//Функция удаляет элемент, если он есть на странице
+export function removeElement(elementToDelete, parentNode) {
+  if (elementToDelete !== null) {
+    parentNode.removeChild(elementToDelete);
   }
 }
 
@@ -35,6 +38,10 @@ if (document.querySelector(classElementToDelete) !== null) {                //е
 import {newsApiAdress, token} from './constants';
 
 export function generateRequestTemplate(inputValue) {
+    const date1 = new Date();
+    const currentDate = date1.toJSON().slice(0,10);
+    const date2 = new Date(date1 - msPerDay * (daysPerWeek - 1));
+    const pastDate = date2.toJSON().slice(0,10);
     return  `${newsApiAdress}` + 
             'q=' + `${inputValue}` + '&' +
             'from=' + `${currentDate}` + '&' +
@@ -69,7 +76,7 @@ export function numberOfSlides() {
         slidesCentered = true;
       }
 
-      let options = {
+      const options = {
         slidesPerView: slidesCount,
         spaceBetween: 10,
         initialSlide:	0,
@@ -105,11 +112,11 @@ export function fieldValidation(item) {
 
 //Функция обрезает текст до требуемой в карточке длины
 export function trimText(card) {
-  let outerContainer = card;
-  let textContainer = card.querySelector('.results__text-container');
-  let textFrame = textContainer.querySelector('.text');
+  const outerContainer = card;
+  const textContainer = card.querySelector('.results__text-container');
+  const textFrame = textContainer.querySelector('.text');
   let text = textFrame.textContent;
-  let clone = document.createElement('div');
+  const clone = document.createElement('div');
 
   // console.log(textFrame)  
   // console.log(`${textFrame}`)  

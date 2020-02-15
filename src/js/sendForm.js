@@ -1,21 +1,21 @@
 import { ERRORMESSAGES } from "./constants";
-import { CardList, Card } from "./components";
-import { Search } from "./search";
-import { NewsApi } from "./modules";
-import { LocStor } from "./localStorage";
+import { newCardList } from "./cardList";
+import { newCard } from "./card";
+import { newSearch } from "./search";
+import { newNewsApiRequest } from "./newsApi";
+import { newLocalStorage } from "./localStorage";
 
-export class SendForm {
+class SendForm {
 
   constructor(form) {
       this.form = form;
-      this.inputValueValidation(form);
   }
 
   sendRequest() {
-    new Search(CardList, Card, NewsApi, LocStor);
+    newSearch.searching();
   }
 
-  inputValueValidation() {
+  inputValueValidation(form) {
     let errorCode; 
     if (this.form.validity.valueMissing) {
       errorCode = 'noLength'
@@ -24,14 +24,14 @@ export class SendForm {
     } else {
       errorCode = 'noError'
     }
-    this.formValidation(errorCode);
+    this._formValidation(errorCode);
   }
 
-  formValidation(errorCode) {
+  _formValidation(errorCode) {
     if (errorCode === 'noError') {
       this.sendRequest();
     } else {
-      this.renderErrorMessage(errorCode);
+      this._renderErrorMessage(errorCode);
       this.form.addEventListener('input', () => {
       this.liveValidation(errorCode)})
     } 
@@ -46,11 +46,14 @@ export class SendForm {
     } else {
       newErrorCode = 'noError'
     }
-    this.renderErrorMessage(newErrorCode);    
+    this._renderErrorMessage(newErrorCode);    
   }
 
-  renderErrorMessage(errorCode) {
+  _renderErrorMessage(errorCode) {
     this.form.previousElementSibling.textContent = ERRORMESSAGES[errorCode];
   }
+}
 
+export function newSendForm(form) {
+  return new SendForm(form);
 }

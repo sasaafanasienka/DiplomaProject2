@@ -1,14 +1,10 @@
-import { gitHubApiAdress} from "./constants";
+import { gitHubApiAdress } from "./constants";
 
-export class GitHubApi {
-
-    constructor() {
-        this.request();
-    };
+class GitHubApi {
 
     async request() {
 
-        let res = await fetch(`${gitHubApiAdress}`)
+        const res = await fetch(`${gitHubApiAdress}`)
             if (res.ok) {
                 const result = await res.json();
                 return result;
@@ -17,3 +13,5 @@ export class GitHubApi {
             }
         }
 };
+
+export const newGitHubApiRequest = new GitHubApi()

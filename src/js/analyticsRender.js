@@ -1,24 +1,21 @@
-import { daysOfTheWeek, months } from "./constants";
+import { daysOfTheWeek, months, daysPerWeek, msPerDay } from "./constants";
 
-export class AnalyticsRender {
-    constructor(data) {
-        this.totalResult = data.totalResult;
-        this.data = data.result;
-        this.wordToSearch = data.wordToSearch;
-        this.renderTitle();
-        this.calculationForAxisDates();
+class AnalyticsRender {
+    constructor() {
+        this.totalResult = JSON.parse(localStorage.getItem('result')).totalResults;
+        this.articles = JSON.parse(localStorage.getItem('result')).articles;
+        this.wordToSearch = localStorage.getItem('wordToSearch');
     }
 
-    renderTitle() {
+    _renderTitle() {
         document.querySelector('.analytics__title').textContent = `Вы спросили: ${this.wordToSearch}`;
-        this.titlesCount();
-        document.querySelector('.analytics__news-number').textContent = `${JSON.parse(this.data).totalResults}` 
-        document.querySelector('.analytics__titles-number').textContent = `${this.titlesCount()}`
+        document.querySelector('.analytics__news-number').textContent = `${this.totalResult}` 
+        document.querySelector('.analytics__titles-number').textContent = `${this._titlesCount()}`
     }
 
-    titlesCount() {
+    _titlesCount() {
         let numberOfTitles = 0;
-        JSON.parse(this.data).articles.forEach((element) => {
+        this.articles.forEach((element) => {
             if (element.title.toLowerCase().includes(this.wordToSearch.toLowerCase())) {
                 numberOfTitles++;
             }
@@ -26,38 +23,38 @@ export class AnalyticsRender {
         return numberOfTitles;
     }
 
-    calculationForAxisDates() {
+    _calculationForAxisDates() {
 
         let monthsArr = [];
         let datesObject = {}; // создаем объект в который потом запишем, сколько раз встречается каждая дата публикации
-
-        for (let i = 1; i <= 7; i++) {
-            let date = new Date(new Date().getTime() - (7 - i) * 86400000); //86400000 секунд в сутках
+        
+        for (let i = 1; i <= daysPerWeek; i++) {
+            const date = new Date(new Date().getTime() - (daysPerWeek - i) * msPerDay); //86400000 секунд в сутках
             document.querySelector(`.graph__data-date_${i}`).textContent =
                 `${date.getDate()}, ${daysOfTheWeek[date.getDay()]}`;
-            let month = months[date.getMonth()][0];
+            const month = months[date.getMonth()][0];
             if (!monthsArr.includes(month)) {
                 monthsArr.push(month);
             }
             datesObject[date.getDate()] = 0;
         }
         document.querySelector('.graph__head-month').textContent = `дата (${monthsArr.join(', ')})`
-        this.calculationForRows(JSON.parse(this.data).articles, datesObject);
+        this._calculationForRows(this.articles, datesObject);
     }
 
-    calculationForRows(data, object) {
+    _calculationForRows(data, object) {
         let rowWidth;
         data.forEach((elem) => {
             object[new Date(elem.publishedAt).getDate()] = 
             object[new Date(elem.publishedAt).getDate()] + 1 
         })
-        for (let i = 1; i <= 7; i++) {
+        for (let i = 1; i <= daysPerWeek; i++) {
 
             rowWidth = object[Object.keys(object)[i - 1]] / 100 * 91; //91% - ширина выделенная в верстке для этого элемента
-            let rowGraphElement = document.querySelector(`.graph__data-row_${i}`);               
+            const rowGraphElement = document.querySelector(`.graph__data-row_${i}`);               
             rowGraphElement.style.width = `${rowWidth}%`
 
-            let newGraphText = document.createElement('p');
+            const newGraphText = document.createElement('p');
             newGraphText.classList.add(`graph__data-text_${i}`, 'graph__data-text');
             newGraphText.textContent = `${object[Object.keys(object)[i - 1]]}`
             
@@ -72,3 +69,5 @@ export class AnalyticsRender {
         }     
     }
 }
+
+export const newAnalyticsRender = new AnalyticsRender();

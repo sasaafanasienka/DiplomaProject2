@@ -20,6 +20,11 @@
     padding: 19px 206px 19px 22px;
 }
 
+.head-block__search-input_disabled {
+    border: 2px solid #b4b4b4;
+    padding: 19px 206px 19px 22px;
+}
+
 @media (max-width: 1000px) {
     .head-block__search-input {
         padding: 17px 172px 17px 24px;

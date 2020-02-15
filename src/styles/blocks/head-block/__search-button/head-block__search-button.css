@@ -16,10 +16,21 @@
     color: #FFF;
     outline: none;
     transition: background-color 0.4s linear 0s;
+
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .head-block__search-button:hover {
     background-color: #3d80f7;
+}
+
+.head-block__search-button_disabled {
+    background-color: #b4b4b4;
+}
+.head-block__search-button_disabled:hover {
+    background-color: #b4b4b4;
 }
 
 @media (max-width: 1000px) {

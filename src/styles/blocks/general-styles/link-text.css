@@ -10,10 +10,14 @@
     /* border: 1px solid red */
     transition: opacity 0.4s linear 0s;
     text-decoration: none;
+    color: var(--main-black-color);
 }
 
 .link-text:hover {
     opacity: .7;
+}
+.link-text:active {
+    color: var(--main-black-color);
 }
 .link-text:visited {
     color: var(--main-black-color);

@@ -3,11 +3,18 @@ import "../src/swiper.js";
 
 import { gitHubApiAdress } from "./js/constants";
 import { GitHubApi } from "./js/gitHubApi";
-import { RenderCommitCards } from "./js/components";
+import { newRenderCommitCards } from "./js/renderCommitCards";
 import { numberOfSlides } from "./js/utils"
+import Swiper from "swiper";
 
-new RenderCommitCards(gitHubApiAdress, GitHubApi);
+newRenderCommitCards._render();
 
 window.addEventListener("resize", () => {
-    new Swiper ('.swiper-container', numberOfSlides());
-  });
+  new Swiper('.swiper-container', numberOfSlides())
+});
+// window.addEventListener("resize", () => {
+//     new Swiper ('.swiper-container', numberOfSlides());
+//   });
+// window.addEventListener("resize", () => {
+//     new Swiper ('.swiper-container', numberOfSlides());
+//   });
