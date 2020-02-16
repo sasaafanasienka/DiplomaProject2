@@ -1,5 +1,3 @@
-import { newCardList } from "./cardList";
-
 class NewsApi {
 
     constructor(template) {
