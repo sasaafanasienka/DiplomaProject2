@@ -5,7 +5,7 @@ import {searchButton,
         
 import { newSendForm } from "./js/sendForm";
 import { newCardList } from "./js/cardList";
-import { newCard } from "./js/card";
+import { newLocalStorage } from "./js/localStorage";
 
 newCardList.addCardsAfterRefresh();
 

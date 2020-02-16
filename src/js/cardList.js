@@ -119,28 +119,27 @@ constructor() {
       }
     }
     localStorage.setItem('numberOfRenderedCards', endPoint);               //сохраним в localStotage количество загруженных страниц, чтобы после перезагрузки страницы они все появились сно
-    this.addCards(startPoint, endPoint);
-    this.renderMoreButton();
+    this.addCards(startPoint, endPoint, arrayOfArticles);
+    this.renderMoreButton(arrayOfArticles);
   }
 
   addCardsAfterRefresh() {
     this.removeTitle();
-
-    if (newLocalStorage.getArrayOfNews().length !== 0) {
+    const arrayOfArticles = newLocalStorage.getArrayOfNews();
+    if (arrayOfArticles.length > 0) {
       searchInput.value = localStorage.getItem('wordToSearch');
       this.renderTitle();
       this.createCardsContainer();
       const endPoint = localStorage.getItem('numberOfRenderedCards');
-      this.addCards(0, endPoint);
-      this.renderMoreButton();
-    }
+      this.addCards(0, endPoint, arrayOfArticles);
+      this.renderMoreButton(arrayOfArticles);
+    } 
   }
 
-  addCards(startPoint, endPoint) {
-    const arrayOfArticles = newLocalStorage.getArrayOfNews();
+  addCards(startPoint, endPoint, arrayOfArticles) {
     const resultsContainer = document.querySelector('.results')
     const cardsContainer = document.querySelector('.results__cards-container');
-
+    console.log(arrayOfArticles)
     removeElementByClassName('.results__more', resultsContainer);
 
     for (let i = startPoint; i < endPoint; i++) {
@@ -152,15 +151,12 @@ constructor() {
                       arrayOfArticles[i].source.name,
                       arrayOfArticles[i].url,
       );
-      // console.log(cardElement);
-      // console.log(cardsContainer);
       cardsContainer.appendChild(cardElement);
       cardElement.querySelector('.text').textContent = trimText(cardElement);
     }
   }
 
-  renderMoreButton() {     
-    const arrayOfArticles = newLocalStorage.getArrayOfNews(); 
+  renderMoreButton(arrayOfArticles) {     
     if (document.querySelectorAll('.results__card').length < arrayOfArticles.length) { //если в локалСторадж еще остались незагруженные карточки
       const moreButton = document.createElement('button');                           //то нужно нарисовать кннопку "Показать еще"
       moreButton.classList.add('results__more', 'button-text', 'button');
