@@ -7,7 +7,7 @@ import { newRenderCommitCards } from "./js/renderCommitCards";
 import { numberOfSlides } from "./js/utils"
 import Swiper from "swiper";
 
-newRenderCommitCards._render();
+newRenderCommitCards.render();
 
 window.addEventListener("resize", () => {
   new Swiper('.swiper-container', numberOfSlides())

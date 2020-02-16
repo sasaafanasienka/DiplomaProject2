@@ -1,9 +1,5 @@
 import { ERRORMESSAGES } from "./constants";
-import { newCardList } from "./cardList";
-import { newCard } from "./card";
 import { newSearch } from "./search";
-import { newNewsApiRequest } from "./newsApi";
-import { newLocalStorage } from "./localStorage";
 
 class SendForm {
 

@@ -1,11 +1,3 @@
-import {body,
-    resultsContainer,
-    cardsContainer,
-    swiperWrapper,
-    searchInput} from "./constants.js";
-
-import {deleteElement, deleteElem, dateTransform, numberOfSlides, loadCards, changeImageToDefaultIfNeed, trimText} from "./utils.js"
-
 class Card {
 
   create(imgLink, date, title, text, source, linkPage) {

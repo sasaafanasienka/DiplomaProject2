@@ -12,6 +12,7 @@ export const resultsContainer = document.querySelector('.results');
 export const cardsContainer = document.querySelector('.results__cards-container');
 export const resultsTitleLinkContainer = document.querySelector('.results__title-link-container');
 export const resultsMore = document.querySelector('.results__more');
+export const commitsContainer = document.querySelector('.commits');
 
 export const newsApiAdress = 'https://newsapi.org/v2/everything?';
 export const token = '24337bfa4224440baa15c36b5bdddec0';
@@ -56,5 +57,6 @@ export const ERRORMESSAGES = {
 
 export const REQUESTERRORS = {
     noResult: ['Ничего не найдено!', 'К сожалению по вашему запросу ничего не найдено.', notFoundImage],
-    badRequest: ['Ошибка запроса...', 'Сервер не отвечает или отсутствует соединение с интернетом.', notFoundImage]
+    badRequest: ['Ошибка запроса...', 'Сервер не отвечает или отсутствует соединение с интернетом.', notFoundImage],
+    badGitHubRequest: ['Ошибка запроса...', 'Сервер GitHub не отвечает или отсутствует соединение с интернетом.', ],
   }

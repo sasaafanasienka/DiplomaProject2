@@ -1,17 +1,20 @@
 import { gitHubApiAdress } from "./constants";
+import { newRenderCommitCards } from "./renderCommitCards";
 
 class GitHubApi {
 
-    async request() {
-
-        const res = await fetch(`${gitHubApiAdress}`)
-            if (res.ok) {
-                const result = await res.json();
-                return result;
-            } else {
-            return Promise.reject('Ошибка: ${response.status}')
-            }
-        }
+    request() {
+        return fetch(`${gitHubApiAdress}`)
+        .then((res) => {
+            return res.json() // если всё хорошо, получили ответ
+        })
+        .then((result) => {
+            return result;
+        })
+        .catch(() => {
+            newRenderCommitCards.renderError(); 
+        });
+    }
 };
 
 export const newGitHubApiRequest = new GitHubApi()

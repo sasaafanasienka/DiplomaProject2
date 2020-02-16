@@ -7,23 +7,21 @@ export function dateTransform(dateOfPublication) {
     return `${fulldate.getDate()} ${months[fulldate.getMonth()][1]}, ${fulldate.getFullYear()}`;
 }
 
-//Функцмия заменяющая изображение на заглушку, если изображение не загружается
+//Функция заменяющая изображение на заглушку, если ссылки на изображение нет в ответе от Api
 export function changeImageToDefaultIfNeed(imageURL) {
     let image;
-    if (imageURL === null) {
+      if (imageURL === null) {
         image = placeHoldImage;
-    } else {
-        image = placeHoldImage;
+      } else {
         image = imageURL;
-    }
+      }
     return image;            
 }
 
 //Функция удаляет элемент, если он есть на странице
 export function removeElementByClassName(classElementToDelete, parentNode) {
   if (document.querySelector(classElementToDelete) !== null) {                //если элемент есть на странице,
-    parentNode.removeChild(document.querySelector(classElementToDelete));  //то ее нужно удалить
-    // console.log(`deleted element by class ${classElementToDelete}`)
+    parentNode.removeChild(document.querySelector(classElementToDelete));  //то их нужно удалить
   }
 }
 
@@ -34,7 +32,7 @@ export function removeElement(elementToDelete, parentNode) {
   }
 }
 
-//Функция добавляет значение поля ввода в шаблон запроса и возвращает готовый запрос
+//Функция добавляет значение поля ввода в шаблон запроса, считает даты в правильном формате и возвращает готовый запрос
 import {newsApiAdress, token} from './constants';
 
 export function generateRequestTemplate(inputValue) {
@@ -118,8 +116,6 @@ export function trimText(card) {
   let text = textFrame.textContent;
   const clone = document.createElement('div');
 
-  // console.log(textFrame)  
-  // console.log(`${textFrame}`)  
   clone.classList.add('text');
   clone.style.cssText = `position: absolute;
                          visibility: hidden;

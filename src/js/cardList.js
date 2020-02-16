@@ -1,22 +1,14 @@
-import {body,
+import {
         resultsContainer,
-        cardsContainer,
-        swiperWrapper,
         searchInput,
-        preloaderCircle,
-        preloaderText,
-        noResultImageContainer,
-        noResultTitle,
-        noResultSubtitle,
-        resultsMore,
-        resultsTitleLinkContainer, 
-        REQUESTERRORS} from "./constants.js";
+        REQUESTERRORS
+      } from "./constants.js";
 
 import {dateTransform,
         changeImageToDefaultIfNeed,
         trimText,
         removeElementByClassName,
-        removeElement} from "./utils.js"
+        } from "./utils.js"
 
 import { newCard } from "./card"
 import { newLocalStorage } from "./localStorage.js";
@@ -123,7 +115,7 @@ constructor() {
       if ((Math.ceil(startPoint / 3) + 1) * 3 <= arrayOfArticles.length) {   //проверим хватит ли в массиве карточек для загрузки
         endPoint = (Math.ceil(startPoint / 3) + 1) * 3;                    //Всегда будет загружаться количество карточек нужное до целого следующего ряда
       } else {
-        endPoint = arrayOfArticles.length - 1;                                   //если карточек осталось мало, то загрузим то, что осталось до конца
+        endPoint = arrayOfArticles.length;                                   //если карточек осталось мало, то загрузим то, что осталось до конца
       }
     }
     localStorage.setItem('numberOfRenderedCards', endPoint);               //сохраним в localStotage количество загруженных страниц, чтобы после перезагрузки страницы они все появились сно
@@ -133,11 +125,8 @@ constructor() {
 
   addCardsAfterRefresh() {
     this.removeTitle();
-    if (localStorage.getItem('length') !== null || newLocalStorage.getArrayOfNews().length !== 0) {
-      // console.log(localStorage.getItem('length'))
-      // console.log(newLocalStorage.getArrayOfNews().length)
-      // console.log(JSON.parse(localStorage.getItem('result')));
-      // console.log(1);
+
+    if (newLocalStorage.getArrayOfNews().length !== 0) {
       searchInput.value = localStorage.getItem('wordToSearch');
       this.renderTitle();
       this.createCardsContainer();
@@ -145,9 +134,6 @@ constructor() {
       this.addCards(0, endPoint);
       this.renderMoreButton();
     }
-    // } else {
-    //   this.removeTitle();
-    // }
   }
 
   addCards(startPoint, endPoint) {
@@ -158,7 +144,6 @@ constructor() {
     removeElementByClassName('.results__more', resultsContainer);
 
     for (let i = startPoint; i < endPoint; i++) {
-      // console.log(i)
       const cardElement = 
       newCard.create (changeImageToDefaultIfNeed(arrayOfArticles[i].urlToImage),
                       dateTransform(arrayOfArticles[i].publishedAt), 

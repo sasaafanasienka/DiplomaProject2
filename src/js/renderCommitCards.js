@@ -1,13 +1,14 @@
-import { swiperWrapper } from "./constants.js";
 import { numberOfSlides, dateTransform } from "./utils.js"
 import { newGitHubApiRequest } from "./gitHubApi.js";
+import { removeElementByClassName } from "./utils";
+import { swiperWrapper, commitsContainer, REQUESTERRORS } from "./constants";
 
 class RenderCommitCards {
     constructor(adressToRequest) {
         this.adress = adressToRequest;
     }
   
-    async _render() {
+    async render() {
         await newGitHubApiRequest.request()
             .then(result => {
                 result.forEach(el => {
@@ -48,6 +49,18 @@ class RenderCommitCards {
             })
         new Swiper('.swiper-container', numberOfSlides());
       
+    }
+
+    renderError() {
+      removeElementByClassName('.swiper-container', commitsContainer);
+      const noResultTitle = document.createElement('h4');
+          noResultTitle.classList.add('title-mini', 'title-mini_center', 'no-result__title');
+          noResultTitle.textContent = REQUESTERRORS['badGitHubRequest'][0];
+      const noResultSubtitle = document.createElement('p');
+          noResultSubtitle.classList.add('text', 'text-center', 'no-result__subtitle');
+          noResultSubtitle.textContent = REQUESTERRORS['badGitHubRequest'][1];
+      commitsContainer.appendChild(noResultTitle);
+      commitsContainer.appendChild(noResultSubtitle);
     }
   }
 

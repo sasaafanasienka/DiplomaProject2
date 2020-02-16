@@ -9,7 +9,7 @@ class LocalStorage {
     }
 
     getArrayOfNews() {
-        if (localStorage.getItem('result') === null) {
+        if (localStorage.getItem('result') === null || typeof localStorage.getItem('result') === 'object') {
             // console.log(1)
             const arr = []
             return arr;

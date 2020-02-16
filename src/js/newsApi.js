@@ -9,8 +9,7 @@ class NewsApi {
     simpleRequest() {
         return fetch(this.template)
             .then((res) => {
-                // console.log(res.ok);
-                return res.json() // если всё хорошо, получили ответ
+                return res.json()
             })
             .then((result) => {
                 return result;
@@ -26,20 +25,3 @@ class NewsApi {
 export function newNewsApiRequest(template) {
     return new NewsApi(template);
 }
-
-// export class NewsApi {
-
-//     constructor() {
-//     };
-
-//     async simpleRequest(template) {
-
-//         let res = await fetch(template)
-//             if (res.ok) {
-//                 const result = await res.json();
-//                 return result;
-//             } else {
-//             return Promise.reject('Ошибка: ${response.status}')
-//             }
-//         }
-// };

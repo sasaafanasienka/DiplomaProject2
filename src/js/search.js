@@ -3,7 +3,6 @@ import { searchInput, searchButton } from "./constants";
 import { newCardList } from "./cardList";
 import { newLocalStorage } from "./localStorage";
 import { newNewsApiRequest } from "./newsApi";
-import { newCard } from "./card";
 
 class Search {
 
@@ -41,35 +40,3 @@ class Search {
 }
 
 export const newSearch = new Search();
-
-
-// export class Search {
-
-//     constructor(classToRenderCardList, classToRenderCards, apiClass, localStorageClass) {
-//         this.searching(classToRenderCardList, classToRenderCards, apiClass, localStorageClass);
-//     }
-
-//     async searching(classToRenderCardList, classToRenderCards, apiClass, localStorageClass) {
-
-//         const cardList = new classToRenderCardList;
-//         cardList.removeAll();
-//         cardList.renderTitle();
-//         cardList.renderPreloader();
-
-//         const refreshLocalStorage = new localStorageClass;
-
-//         const api = new apiClass;
-//         await api.simpleRequest(generateRequestTemplate(searchInput.value))
-//         .then((result) => {
-//             cardList.removePreloader();
-//             refreshLocalStorage.loadToLocalStorage(result);
-//             if (result.articles.length === 0) {
-//                 cardList.renderNoResult();
-//             } else {
-//                 const newCard = new classToRenderCards;
-//                 cardList.createCardsContainer();
-//                 cardList.addCard(newCard.downloadSomeNewCards());
-//             }
-//         })
-//     }
-// }
