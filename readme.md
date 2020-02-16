@@ -25,4 +25,5 @@
 https://sasaafanasienka.github.io/DiplomaProject2
 
 # Планы по доработке проекта:
-* реализация обращения к внешенму API на JavaScript
+* создание базового компонента base_component
+* окончательная доработка всех текстов на страницах
