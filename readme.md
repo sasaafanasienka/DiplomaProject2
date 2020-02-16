@@ -20,6 +20,9 @@
 `npm run build` - сборка финальной версии проекта
 `npm run deploy` - передать собранный проект на gh-pages
 
+# Gh-pages 
+Последня версия дипломного проекта доступна для просмотра  по ссылке:
+https://sasaafanasienka.github.io/DiplomaProject2
 
 # Планы по доработке проекта:
 * реализация обращения к внешенму API на JavaScript
