@@ -21,7 +21,6 @@ class LocalStorage {
     }
 
     checkErrors() {
-        console.log('checking localStorage for errors..')
         if (localStorage.getItem('numberOfRenderedCards') < 0) { //отлавливаем возмоджные ошибки в localStorage;
             localStorage.clear();
         };

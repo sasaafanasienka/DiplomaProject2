@@ -14,10 +14,10 @@ class NewsApi {
             .then((result) => {
                 return result;
             })
-            .catch(() => {
-                newCardList.removePreloader();
-                newCardList.renderNoResult('badRequest');
-            });
+            // .catch(() => {
+            //     newCardList.removePreloader();
+            //     newCardList.renderNoResult('badRequest');
+            // });
     };
 
 }

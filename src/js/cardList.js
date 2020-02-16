@@ -139,7 +139,6 @@ constructor() {
   addCards(startPoint, endPoint, arrayOfArticles) {
     const resultsContainer = document.querySelector('.results')
     const cardsContainer = document.querySelector('.results__cards-container');
-    console.log(arrayOfArticles)
     removeElementByClassName('.results__more', resultsContainer);
 
     for (let i = startPoint; i < endPoint; i++) {

@@ -17,4 +17,4 @@ class GitHubApi {
     }
 };
 
-export const newGitHubApiRequest = new GitHubApi()
+export const newGitHubApiRequest = new GitHubApi();
