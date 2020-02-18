@@ -1,0 +1,14 @@
+.head-block__validation-text {
+    width: 100%;
+    height: 24px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 21px;
+    letter-spacing: 0.5px;
+}

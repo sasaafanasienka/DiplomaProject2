@@ -12,7 +12,7 @@
 }
 @media (max-width: 1000px) {
     .title-link-container {
-        margin-bottom: 15px;
+        margin-bottom: 36px;
     }
     .main-block_commits .title-link-container {
         padding: 0 5.1% 0 5.1%;
@@ -21,7 +21,6 @@
 @media (max-width: 600px) {
     .title-link-container {
         flex-direction: column;
-        margin-bottom: 36px;
     }
     .main-block_commits .title-link-container {
         padding: 0 5.1% 0 5.1%;

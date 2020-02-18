@@ -4,10 +4,23 @@
     --main-darkgray-color: #B6BCBF;
   }
 
+html {
+  max-height: 999999px;
+}  
+
 body {
+  max-height: 999999px;
     margin: 0;
 }
 
 ul {
   padding: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }

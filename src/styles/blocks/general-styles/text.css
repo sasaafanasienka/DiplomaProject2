@@ -31,14 +31,15 @@
 .text-gray {
     color: var(--main-darkgray-color);
 }
-.results__card .text {
+.results__text-container .text {
     width: 90%;
-    max-height: 110px;
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 18px;
+    margin: 0 0 18px 0;
     overflow: hidden;
+    text-overflow: ellipsis;  
 }
+
 .swiper-slide .text {
     max-height: 96px;
     overflow: hidden;
