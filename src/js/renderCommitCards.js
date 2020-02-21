@@ -47,6 +47,9 @@ class RenderCommitCards {
                     swiperWrapper.appendChild(slide);
                 })
             })
+            .catch(() => {
+                  this.renderError();
+            })
         new Swiper('.swiper-container', numberOfSlides());
       
     }

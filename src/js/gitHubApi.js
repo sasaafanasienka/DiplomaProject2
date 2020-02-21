@@ -11,9 +11,6 @@ class GitHubApi {
         .then((result) => {
             return result;
         })
-        .catch(() => {
-            newRenderCommitCards.renderError(); 
-        });
     }
 };
 
