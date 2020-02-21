@@ -40,7 +40,7 @@
         <img class="about-author__img" src="<%=require('./images/userimage.jpg').default%>" alt="Фото автора">
       </picture>
       <div class="about-author__info-container">
-        <h3 class="title">ОБ авторе</h3>
+        <h3 class="title">Об авторе</h3>
         <p class="text">Привет! Меня зовут Саша и я — автор проекта NewsAnalyzer, который вы видите на своем экране</p>
         <p class="text">NewsAnalyzer ищет новости на русском по ключевому слову за последнюю неделю, сохраняет результаты поиска при перезагрузке страница
           и строит график по упоминанию ключевых слов на новостных сайтах за последние 7 дней</p>
@@ -68,7 +68,7 @@
       </ul>
     </footer>
 
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    <script type="module" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 
   </body>
 </html>

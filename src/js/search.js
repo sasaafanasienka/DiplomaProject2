@@ -24,11 +24,6 @@ class Search {
            
                 newLocalStorage.loadToLocalStorage(result);
                 newCardList.removePreloader();
-                searchInput.removeAttribute('disabled', true)
-                searchButton.removeAttribute('disabled', true)
-                searchInput.classList.remove('head-block__search-input_disabled')
-                searchButton.classList.remove('head-block__search-button_disabled')
-    
                 if (result.articles.length === 0) {
                     newCardList.renderNoResult('noResult');
                 } else {
@@ -38,6 +33,7 @@ class Search {
             } catch {
                 newCardList.removePreloader();
                 newCardList.renderNoResult('badRequest');
+            } finally {
                 searchInput.removeAttribute('disabled', true)
                 searchButton.removeAttribute('disabled', true)
                 searchInput.classList.remove('head-block__search-input_disabled')
