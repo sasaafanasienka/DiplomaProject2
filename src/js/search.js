@@ -1,10 +1,10 @@
 import { generateRequestTemplate } from "./utils";
 import { searchInput, searchButton } from "./constants";
-import { newCardList } from "./cardList";
-import { newLocalStorage } from "./localStorage";
-import { newNewsApiRequest } from "./newsApi";
+import { CardList } from "./cardList";
+import { LocalStorage } from "./localStorage";
+import { NewsApiRequest } from "./newsApi";
 
-class Search {
+export class Search {
 
     searching() {
 
@@ -45,5 +45,3 @@ class Search {
         request();
     }
 }
-
-export const newSearch = new Search();

@@ -13,7 +13,7 @@ import {dateTransform,
 import { newCard } from "./card"
 import { newLocalStorage } from "./localStorage.js";
 
-class CardList {
+export class CardList {
 
 constructor() {
 }
@@ -167,5 +167,3 @@ constructor() {
       }
   }
 }
-
-export const newCardList = new CardList();

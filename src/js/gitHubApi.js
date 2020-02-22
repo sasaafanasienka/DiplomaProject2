@@ -1,17 +1,16 @@
 import { gitHubApiAdress } from "./constants";
-import { newRenderCommitCards } from "./renderCommitCards";
 
-class GitHubApi {
+export class GitHubApi {
 
     request() {
+        console.log('making githubapi request')
         return fetch(`${gitHubApiAdress}`)
         .then((res) => {
             return res.json() // если всё хорошо, получили ответ
         })
         .then((result) => {
-            return result;
+            console.log(result)
+            return result.slice(0, 20);
         })
     }
 };
-
-export const newGitHubApiRequest = new GitHubApi();

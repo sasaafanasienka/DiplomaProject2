@@ -1,6 +1,6 @@
 import placeHoldImage from "../images/no_image_in_news.svg";
 
-class Card {
+export class Card {
 
   create(imgLink, date, title, text, source, linkPage) {
     const resultCard = document.createElement('div');
@@ -44,5 +44,3 @@ class Card {
     return resultCard;  
   }
 }
-
-export const newCard = new Card();

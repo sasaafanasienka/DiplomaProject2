@@ -1,6 +1,6 @@
 import { searchInput } from "./constants";
 
-class LocalStorage {
+export class LocalStorage {
 
     loadToLocalStorage(resultOfRequest) {
         localStorage.clear();
@@ -32,5 +32,3 @@ class LocalStorage {
         }
     }
 };
-
-export const newLocalStorage = new LocalStorage();

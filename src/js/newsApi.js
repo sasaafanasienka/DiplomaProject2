@@ -1,4 +1,4 @@
-class NewsApi {
+export class NewsApi {
 
     constructor(template) {
         this.template = template;
@@ -18,8 +18,4 @@ class NewsApi {
             // });
     };
 
-}
-
-export function newNewsApiRequest(template) {
-    return new NewsApi(template);
 }

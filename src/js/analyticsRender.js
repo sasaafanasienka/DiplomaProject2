@@ -1,6 +1,6 @@
 import { daysOfTheWeek, months, daysPerWeek, msPerDay } from "./constants";
 
-class AnalyticsRender {
+export class AnalyticsRender {
     constructor() {
         this.totalResult = JSON.parse(localStorage.getItem('result')).totalResults;
         this.articles = JSON.parse(localStorage.getItem('result')).articles;
@@ -69,5 +69,3 @@ class AnalyticsRender {
         }     
     }
 }
-
-export const newAnalyticsRender = new AnalyticsRender();

@@ -1,7 +1,7 @@
 import { ERRORMESSAGES } from "./constants";
 import { newSearch } from "./search";
 
-class SendForm {
+export class SendForm {
 
   constructor(form) {
       this.form = form;
@@ -48,8 +48,4 @@ class SendForm {
   _renderErrorMessage(errorCode) {
     this.form.previousElementSibling.textContent = ERRORMESSAGES[errorCode];
   }
-}
-
-export function newSendForm(form) {
-  return new SendForm(form);
 }
