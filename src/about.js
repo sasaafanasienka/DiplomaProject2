@@ -1,5 +1,5 @@
 import "../src/styles/about.css";
-import "../src/swiper.js";
+import "../src/blocks/swiper/swiper";
 
 import Swiper from "swiper";
 

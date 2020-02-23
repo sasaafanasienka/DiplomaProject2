@@ -1,4 +1,4 @@
-import { daysOfTheWeek, months, daysPerWeek, msPerDay } from "./constants";
+import { daysOfTheWeek, months, daysPerWeek, msPerDay } from "../../js/constants";
 
 export class AnalyticsRender {
     constructor() {

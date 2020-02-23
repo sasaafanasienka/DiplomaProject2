@@ -1,5 +1,5 @@
 import "../src/styles/analytics.css";
-import { AnalyticsRender } from "./js/analyticsRender";
+import { AnalyticsRender } from "./blocks/graph/analyticsRender";
 
 const analyticsRender = new AnalyticsRender();
 

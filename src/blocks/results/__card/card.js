@@ -1,4 +1,4 @@
-import placeHoldImage from "../images/no_image_in_news.svg";
+import placeHoldImage from "../../../images/no_image_in_news.svg";
 
 export class Card {
 

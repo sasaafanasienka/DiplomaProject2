@@ -19,18 +19,14 @@ export class Validation {
     } else {
       errorCode = 'noError'
     }
-    this._formValidation(errorCode);
-  }
-
-  _formValidation(errorCode) {
     if (errorCode === 'noError') {
- 
+      return errorCode;
     } else {
       this._renderErrorMessage(errorCode);
       this.form.addEventListener('input', () => {
       this.liveValidation(errorCode)})
-    } 
-  }
+      return errorCode;
+    }}
 
   liveValidation() {
     let newErrorCode; 

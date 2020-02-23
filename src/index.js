@@ -4,11 +4,10 @@ import {searchButton,
         searchInput} from './js/constants.js'
         
 import { Validation } from "./js/validation";
-import { CardList } from "./js/cardList";
+import { CardList } from "./blocks/results/__cards-container/cardList.js";
 import { LocalStorage } from "./js/localStorage";
 import { NewsApi } from "./js/newsApi"
 import { generateRequestTemplate } from "./js/utils.js"
- 
 
 const cardList = new CardList();
 const newLocalStorage = new LocalStorage();
@@ -19,13 +18,13 @@ const api = (template) => new NewsApi(template);
 function addCardsAfterRefresh() {
     cardList.removeTitle();
     const arrayOfArticles = newLocalStorage.getArrayOfNews();
-    if (arrayOfArticles.length > 0) {
-      searchInput.value = localStorage.getItem('wordToSearch');
-      cardList.renderTitle();
-      cardList.createCardsContainer();
-      const endPoint = localStorage.getItem('numberOfRenderedCards');
-      cardList.addCards(0, endPoint, arrayOfArticles);
-      cardList.renderMoreButton(arrayOfArticles);
+    if (arrayOfArticles) {
+        searchInput.value = localStorage.getItem('wordToSearch');
+        cardList.renderTitle();
+        cardList.createCardsContainer();
+        const endPoint = localStorage.getItem('numberOfRenderedCards');
+        cardList.addCards(0, endPoint, arrayOfArticles);
+        cardList.renderMoreButton(arrayOfArticles);
     } 
   }
 
@@ -33,7 +32,8 @@ addCardsAfterRefresh();
 
 function search() {
 
-    validation(searchInput).inputValueValidation();
+    const validationError = validation(searchInput).inputValueValidation();
+    if (validationError === 'noError') {
 
     cardList.removeAll(); 
     cardList.renderTitle();
@@ -45,9 +45,7 @@ function search() {
 
     api(generateRequestTemplate(searchInput.value)).request()
         .then((result) => {
-            console.log(result.articles);
             newLocalStorage.loadToLocalStorage(result);
-            console.log(localStorage);
             cardList.removePreloader();
             if (result.articles.length === 0) {
                 cardList.renderNoResult('noResult');
@@ -66,6 +64,7 @@ function search() {
             searchInput.classList.remove('head-block__search-input_disabled')
             searchButton.classList.remove('head-block__search-button_disabled')
         })
+    }
 }
 
 searchButton.addEventListener('click', () => {

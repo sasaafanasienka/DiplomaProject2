@@ -1,17 +1,16 @@
 import {
         resultsContainer,
-        searchInput,
         REQUESTERRORS
-      } from "./constants.js";
+      } from "../../../js/constants";
 
 import {dateTransform,
         changeImageToDefaultIfNeed,
         trimText,
         removeElementByClassName,
-        } from "./utils.js"
+        } from "../../../js/utils";
 
-import { Card } from "./card"
-import { LocalStorage } from "./localStorage.js";
+import { Card } from "../__card/card"
+import { LocalStorage } from "../../../js/localStorage";
 
 const card = new Card();
 const newLocalStorage = new LocalStorage();
