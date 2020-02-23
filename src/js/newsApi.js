@@ -4,7 +4,7 @@ export class NewsApi {
         this.template = template;
     };
 
-    simpleRequest() {
+    request() {
         return fetch(this.template)
             .then((res) => {
                 return res.json()

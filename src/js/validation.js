@@ -1,14 +1,13 @@
 import { ERRORMESSAGES } from "./constants";
-import { newSearch } from "./search";
 
-export class SendForm {
+export class Validation {
 
   constructor(form) {
       this.form = form;
   }
 
   sendRequest() {
-    newSearch.searching();
+    search.searching();
   }
 
   inputValueValidation(form) {
@@ -25,7 +24,7 @@ export class SendForm {
 
   _formValidation(errorCode) {
     if (errorCode === 'noError') {
-      this.sendRequest();
+ 
     } else {
       this._renderErrorMessage(errorCode);
       this.form.addEventListener('input', () => {

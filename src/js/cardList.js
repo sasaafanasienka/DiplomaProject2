@@ -10,8 +10,11 @@ import {dateTransform,
         removeElementByClassName,
         } from "./utils.js"
 
-import { newCard } from "./card"
-import { newLocalStorage } from "./localStorage.js";
+import { Card } from "./card"
+import { LocalStorage } from "./localStorage.js";
+
+const card = new Card();
+const newLocalStorage = new LocalStorage();
 
 export class CardList {
 
@@ -123,19 +126,6 @@ constructor() {
     this.renderMoreButton(arrayOfArticles);
   }
 
-  addCardsAfterRefresh() {
-    this.removeTitle();
-    const arrayOfArticles = newLocalStorage.getArrayOfNews();
-    if (arrayOfArticles.length > 0) {
-      searchInput.value = localStorage.getItem('wordToSearch');
-      this.renderTitle();
-      this.createCardsContainer();
-      const endPoint = localStorage.getItem('numberOfRenderedCards');
-      this.addCards(0, endPoint, arrayOfArticles);
-      this.renderMoreButton(arrayOfArticles);
-    } 
-  }
-
   addCards(startPoint, endPoint, arrayOfArticles) {
     const resultsContainer = document.querySelector('.results')
     const cardsContainer = document.querySelector('.results__cards-container');
@@ -143,7 +133,7 @@ constructor() {
 
     for (let i = startPoint; i < endPoint; i++) {
       const cardElement = 
-      newCard.create (changeImageToDefaultIfNeed(arrayOfArticles[i].urlToImage),
+      card.create (changeImageToDefaultIfNeed(arrayOfArticles[i].urlToImage),
                       dateTransform(arrayOfArticles[i].publishedAt), 
                       arrayOfArticles[i].title,
                       arrayOfArticles[i].description,

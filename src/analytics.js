@@ -1,5 +1,7 @@
 import "../src/styles/analytics.css";
-import { newAnalyticsRender } from "./js/analyticsRender";
+import { AnalyticsRender } from "./js/analyticsRender";
 
-newAnalyticsRender._renderTitle();
-newAnalyticsRender._calculationForAxisDates();
+const analyticsRender = new AnalyticsRender();
+
+analyticsRender._renderTitle();
+analyticsRender._calculationForAxisDates();
