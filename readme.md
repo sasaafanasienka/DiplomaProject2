@@ -22,4 +22,4 @@
 
 # Gh-pages 
 Последня версия дипломного проекта доступна для просмотра  по ссылке:
-https://sasaafanasienka.github.io/DiplomaProject2
+https://sasaafanasienka.github.io/Praktikum_diploma_project
