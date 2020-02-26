@@ -1,19 +1,21 @@
 import {
         resultsContainer,
-        searchInput,
         REQUESTERRORS
-      } from "./constants.js";
+      } from "../../../js/constants";
 
 import {dateTransform,
         changeImageToDefaultIfNeed,
         trimText,
         removeElementByClassName,
-        } from "./utils.js"
+        } from "../../../js/utils";
 
-import { newCard } from "./card"
-import { newLocalStorage } from "./localStorage.js";
+import { Card } from "../__card/card"
+import { LocalStorage } from "../../../js/localStorage";
 
-class CardList {
+const card = new Card();
+const newLocalStorage = new LocalStorage();
+
+export class CardList {
 
 constructor() {
 }
@@ -123,19 +125,6 @@ constructor() {
     this.renderMoreButton(arrayOfArticles);
   }
 
-  addCardsAfterRefresh() {
-    this.removeTitle();
-    const arrayOfArticles = newLocalStorage.getArrayOfNews();
-    if (arrayOfArticles.length > 0) {
-      searchInput.value = localStorage.getItem('wordToSearch');
-      this.renderTitle();
-      this.createCardsContainer();
-      const endPoint = localStorage.getItem('numberOfRenderedCards');
-      this.addCards(0, endPoint, arrayOfArticles);
-      this.renderMoreButton(arrayOfArticles);
-    } 
-  }
-
   addCards(startPoint, endPoint, arrayOfArticles) {
     const resultsContainer = document.querySelector('.results')
     const cardsContainer = document.querySelector('.results__cards-container');
@@ -143,7 +132,7 @@ constructor() {
 
     for (let i = startPoint; i < endPoint; i++) {
       const cardElement = 
-      newCard.create (changeImageToDefaultIfNeed(arrayOfArticles[i].urlToImage),
+      card.create (changeImageToDefaultIfNeed(arrayOfArticles[i].urlToImage),
                       dateTransform(arrayOfArticles[i].publishedAt), 
                       arrayOfArticles[i].title,
                       arrayOfArticles[i].description,
@@ -167,5 +156,3 @@ constructor() {
       }
   }
 }
-
-export const newCardList = new CardList();
