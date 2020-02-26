@@ -22,8 +22,4 @@
 
 # Gh-pages 
 Последня версия дипломного проекта доступна для просмотра  по ссылке:
-https://sasaafanasienka.github.io/DiplomaProject2
-
-# Планы по доработке проекта:
-* создание базового компонента base_component
-* окончательная доработка всех текстов на страницах
+https://sasaafanasienka.github.io/Praktikum_diploma_project
