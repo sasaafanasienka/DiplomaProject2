@@ -91,6 +91,7 @@ export function numberOfSlides() {
           prevEl: '.swiper-button-prev',
         }
       }
+      // console.log(options);
       return options;
   }
 

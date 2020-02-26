@@ -91,9 +91,11 @@
         <img class="about-author__img" src="<%=require('./images/userimage.jpg').default%>" alt="Фото автора">
       </picture>
       <div class="about-author__info-container">
-        <h3 class="title">Александр Афанасенко</h3>
-        <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут.</p>
-        <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
+        <h3 class="title">Об авторе</h3>
+        <p class="text">Привет! Меня зовут Саша, и я — автор проекта NewsAnalyzer, который вы видите на своем экране</p>
+        <p class="text">NewsAnalyzer ищет новости на русском языке по ключевому слову за последнюю неделю, сохраняет результаты поиска при перезагрузке страницы
+          и строит график упоминания ключевых слов на новостных сайтах за последние 7 дней</p>
+        <p class="text">Технологии: HTML, CSS, JS(ES6), WebPack, GIT, NPM</p>
       </div>
     </section>
     <footer class='footer'>
@@ -117,7 +119,7 @@
       </ul>
     </footer>
 
-    <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+    <script type="module" src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
 
   </body>
 </html>

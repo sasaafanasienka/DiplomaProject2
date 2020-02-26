@@ -1,4 +1,6 @@
-class Card {
+import placeHoldImage from "../../../images/no_image_in_news.svg";
+
+export class Card {
 
   create(imgLink, date, title, text, source, linkPage) {
     const resultCard = document.createElement('div');
@@ -6,6 +8,9 @@ class Card {
     const cardImg = document.createElement('img');
       cardImg.classList.add('results__card-cover');
       cardImg.setAttribute('src', imgLink);
+      cardImg.onerror = () => {                       //если картинка не загружается
+        cardImg.setAttribute('src', placeHoldImage);  //то вставим на ее место заглушку
+      }
       cardImg.setAttribute('alt', 'Обложка новости');
     const cardDate = document.createElement('p');
       cardDate.classList.add('results__card-content', 'date')
@@ -39,5 +44,3 @@ class Card {
     return resultCard;  
   }
 }
-
-export const newCard = new Card();

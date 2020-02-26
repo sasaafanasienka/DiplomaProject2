@@ -2,17 +2,17 @@
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts.css);
 /* Стили библиотек */
-@import url(./blocks/general-styles/link-text.css);
-@import url(./blocks/general-styles/text.css);
-@import url(./blocks/general-styles/title-link-container.css);
-@import url(./blocks/general-styles/title-mini.css);
-@import url(./blocks/general-styles/title.css);
-@import url(./blocks/general-styles/body.css);
-@import url(./blocks/general-styles/link-list.css);
+@import url(../common/link-text.css);
+@import url(../common/text.css);
+@import url(../common/title-link-container.css);
+@import url(../common/title-mini.css);
+@import url(../common/title.css);
+@import url(../common/body.css);
+@import url(../common/link-list.css);
 /* Мои стили для разных блоков */
-@import url(./blocks/header/header.css);
-@import url(./blocks/main-block/main-block.css);
-@import url(./blocks/about-author/about-author.css);
-@import url(./blocks/graph/graph.css);
-@import url(./blocks/footer/footer.css);
-@import url(./blocks/current-adress/current-adress.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/main-block/main-block.css);
+@import url(../blocks/about-author/about-author.css);
+@import url(../blocks/graph/graph.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/current-adress/current-adress.css);

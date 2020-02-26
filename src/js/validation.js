@@ -1,14 +1,13 @@
 import { ERRORMESSAGES } from "./constants";
-import { newSearch } from "./search";
 
-class SendForm {
+export class Validation {
 
   constructor(form) {
       this.form = form;
   }
 
   sendRequest() {
-    newSearch.searching();
+    search.searching();
   }
 
   inputValueValidation(form) {
@@ -20,18 +19,14 @@ class SendForm {
     } else {
       errorCode = 'noError'
     }
-    this._formValidation(errorCode);
-  }
-
-  _formValidation(errorCode) {
     if (errorCode === 'noError') {
-      this.sendRequest();
+      return errorCode;
     } else {
       this._renderErrorMessage(errorCode);
       this.form.addEventListener('input', () => {
       this.liveValidation(errorCode)})
-    } 
-  }
+      return errorCode;
+    }}
 
   liveValidation() {
     let newErrorCode; 
@@ -48,8 +43,4 @@ class SendForm {
   _renderErrorMessage(errorCode) {
     this.form.previousElementSibling.textContent = ERRORMESSAGES[errorCode];
   }
-}
-
-export function newSendForm(form) {
-  return new SendForm(form);
 }
