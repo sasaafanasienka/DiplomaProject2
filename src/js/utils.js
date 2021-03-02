@@ -40,13 +40,15 @@ export function generateRequestTemplate(inputValue) {
     const currentDate = date1.toJSON().slice(0,10);
     const date2 = new Date(date1 - msPerDay * (daysPerWeek - 1));
     const pastDate = date2.toJSON().slice(0,10);
-    return  `${newsApiAdress}` + 
-            'q=' + `${inputValue}` + '&' +
-            'from=' + `${currentDate}` + '&' +
-            'to=' + `${pastDate}` + '&' +
-            'pageSize=100&' +
-            'language=ru&' + 
-            'apiKey=' + `${token}`;
+    const requestTemplate = `${newsApiAdress}` + 
+                            'q=' + `${inputValue}` + '&' +
+                            'from=' + `${currentDate}` + '&' +
+                            'to=' + `${pastDate}` + '&' +
+                            'pageSize=100&' +
+                            'language=ru&' + 
+                            'apiKey=' + `${token}`;
+    console.log(requestTemplate)
+    return requestTemplate
 }
 
 //Функция рассчитывает объект опций для правильной инициализации слайдера на любом размере экрана

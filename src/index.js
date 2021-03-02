@@ -45,6 +45,7 @@ function search() {
 
     api(generateRequestTemplate(searchInput.value)).request()
         .then((result) => {
+            console.log(result)
             newLocalStorage.loadToLocalStorage(result);
             cardList.removePreloader();
             if (result.articles.length === 0) {
